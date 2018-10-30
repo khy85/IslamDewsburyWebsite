@@ -1,0 +1,94 @@
+﻿@model IslamDewsburyWebsite.Models.GenericTabbedViewModel
+
+@{
+    ViewBag.Title = "About Us";
+}
+
+<div style="width:100%">
+    <div class="container">
+
+        <div class="row">
+            <div class="col col-sm-8 myHeading">
+                About Us
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col col-sm-8 marginBelowHeading">
+
+                <ul id="myTab" class="nav nav-tabs nav-justified" style="font-weight:bolder;">
+                    <li class="@(@Model.TabNumber == 1 ? "active" : "")">
+                        <a href="#theCentreTab" data-toggle="tab"><i class="fa fa-building-o"></i> The Centre</a>
+                    </li>
+                    <li class="@(@Model.TabNumber == 2 ? "active" : "")">
+                        <a href="#imamTab" data-toggle="tab"><i class="fa fa-user"></i> Imam</a>
+                    </li>
+                    <li class="@(@Model.TabNumber == 3 ? "active" : "")">
+                        <a href="#backgroundTab" data-toggle="tab"><i class="fa fa-building"></i> Background</a>
+                    </li>
+                </ul>
+
+                <div id="myTabContent" class="tab-content" style="padding-top:35px;">
+                    <div id="theCentreTab" class="tab-pane fade @(@Model.TabNumber == 1 ? "active in" : "")">
+                        <div style="font-size:18px; margin-bottom:15px;"><strong>Background</strong></div>
+                        <p>
+                            Islam Dewsbury, also known as Masjid Ahle Hadith, is located in a 2-storey building within the Scouthill area of Dewsbury. The masjid,
+                            which occupies the first floor of the building, has the capacity to accommodate around 450 worshippers. It is one of the few masjids in
+                            the north Kirklees area that has a permanent separate prayer provision for sisters. The masjid o\also perates a thriving madrassah with around 80
+                            students, with ages ranging from 4 to 14 years. Programmes are delivered in the masjid in both Urdu and English.
+                        </p>
+                        <br />
+                        <p>
+                            The Masjid facilities include:
+                            <ul>
+                                <li>Large separate prayer halls for sisters and brothers</li>
+                                <li>Qur’an and Islamic Studies Madrasah for children (five days a week)</li>
+                                <li>Weekly study circles</li>
+                                <li>Jumuah khutbahs in English and Urdu</li>
+                                <li>Funeral preparation facilities</li>
+                                <li>Nikkah and Wedding Hall facilities</li>
+                            </ul>
+                        </p>
+                        <br />
+                        <p>
+                            Useful Contacts:
+                            <ul>
+                                <li>Mohammed Ishaq (Chairman) - 07877 673 192</li>
+                                <li>Mohammed Razaq (General Secretary) - 07889 050 621</li>
+                                <li>Aqeel Adnan (Centre Manager) - 07827 963 264</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div id="imamTab" class="tab-pane fade @(@Model.TabNumber == 2 ? "active in" : "")">
+                        <div style="font-size:18px; margin-bottom:15px;"><strong>Imam</strong></div>
+                        <p>
+                            Imam Hussain Sattar recently took over the position of imam at Islam Dewsbury, as well as the Ustaad at the Madressah from July 2017. He has spent a few years studying at the University of Medina.
+                        </p>
+                        <p>
+                            Imam Hussain will be teaching Islamic Studies and Tajweed from September 2017.
+                        </p>
+                    </div>
+                    <div id="backgroundTab" class="tab-pane fade @(@Model.TabNumber == 3 ? "active in" : "")">
+                        <div style="font-size:18px; margin-bottom:15px;"><strong>The Centre</strong></div>
+                        <p>
+                            The idea of building the masjid and the Salfia Centre came into existence in the early eighties when many Muslim families took residence in the area. It was felt that there was a strong need to provide Islamic and spiritual education for local Muslim children. Thereafter an association was formed with view to providing suitable facilities.
+                        </p>
+                        <p>
+                            The founding members of the masjid were predominantly mill workers who lived in the Scouthill area of Dewsbury. Initially congregational prayers were held in one of the members’ living room. However due to the growing congregation size, it was decided to purchase a house for this purpose. A single back-to-back terraced house was purchased on Stoneybank Street and converted into a full-time masjid and madrasah. Over time as the congregation grew, it was decided to buy two further adjacent terraced properties to increase the capacity of the masjid.
+                        </p>
+                        <p>
+                            In the early nineties it was realised that, despite the previous expansion of the masjid the size of the masjid, it was still inadequate to meet the needs of the local community. Furthermore demographic trends indicated that significantly more additional capacity would be required in the future. It was therefore decided to move the masjid to alternative premises, incorporating a community centre. With the generous help of the local Ahle-Hadith community and donations from the wider Muslim community, an old textile mill was purchased on the same road as the existing masjid and the converted into a new masjid and community centre. The new building included ablution facilities for both brothers and sisters, classrooms and an office suite. The masjid was opened in April 2000 by Dr Abdullah Bin Abdul Muhsin At-Turki, currently the Secretary General of the Muslim World League and formerly the Minister of Islamic Affairs and Endowments in Saudi Arabia.
+                        </p>
+                        <p>
+                            The masjid has previously twice hosted Shaykh Sudais, the Imam of the Ka’bah, and also the Imam of Masjid Al Aqsa in Jerusalem. Recently in 2011 the masjid hosted the famous recitor Shaykh Muhammad Al Luhaidan from Saudi Arabia.
+                        </p>
+                        <p>
+                            English Khutbahs have been a regular part of the masjid programme since 2010 and inshaAllah will continue to increase in frequency in the near future inshaAllah.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

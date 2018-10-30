@@ -1,0 +1,240 @@
+﻿@model IslamDewsburyWebsite.Models.BaseViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Islam Dewsbury</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">  <!-- Bootstrap Core CSS -->
+    <link href="~/Content/modern-business.css" rel="stylesheet">  <!-- Custom CSS -->
+    <link href="~/fonts/font-awesome.min.css" rel="stylesheet" type="text/css">  <!-- Custom Fonts -->
+</head>
+
+<body class="backgroundImg">
+
+    <div id="Top-Page-Horizontal-Area"></div>
+
+    <div class="container">
+
+        <!-- Top header which includes the logo, text, the Basmalah and the Islamic date -->
+        <div id="TopHeader">
+            <div class="row">
+                <div class="col-sm-4">
+                    <img class="img-responsive" src="~/Content/Images/IslamDewsburyText.jpg" />
+                    <div id="divMasjidAddress" class="colorBlue boldText">
+                        Stoney Bank Street, Scout hill, Dewsbury
+                    </div>
+                </div>
+                <div class="col-sm-5" style="text-align:center">
+                    <img id="BasmalahImg" src="~/Content/Images/BasmalahWithTranslation.png" class="img-responsive" style="max-width:90%" />
+                </div>
+
+                <div class="col-sm-3 boldText">
+                    <div id="divArabicDate" class="colorBlue">@Model.ArabicDate</div>
+                    <div id="divEnglishDate">@Model.EnglishDate</div>
+                    <hr id="hrDate" style="margin-top:5px; margin-bottom:5px; width:90%;" />
+                    <div id="divTime">
+                        @*<span id="socialMedia">
+                                <img src="~/Content/Images/SocialMedia/FaceBook.jpg" style="display:block;" />
+                                <img src="~/Content/Images/SocialMedia/Twitter.jpg" />
+                                <img src="~/Content/Images/SocialMedia/YouTube.jpg" />
+                            </span>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-default" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li id="HomeLink" class="@(Model.ActiveTab == IslamDewsburyWebsite.Models.ActiveTab.Home? "active" : "")">
+                        @Html.ActionLink("Home", "Index", "Home")
+                    </li>
+                    <li class="divider-vertical-second-menu"></li>
+
+                    <li id="AboutUsLinks" class="dropdown @(Model.ActiveTab == IslamDewsburyWebsite.Models.ActiveTab.AboutUs? "active" : "")">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                @Html.ActionLink("The Centre", "AboutUs", "Home", new { id = 1 }, null)
+                            </li>
+                            <li>
+                                @Html.ActionLink("Imam", "AboutUs", "Home", new { id = 2 }, null)
+                            </li>
+                            <li>
+                                @Html.ActionLink("Background", "AboutUs", "Home", new { id = 3 }, null)
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="divider-vertical-second-menu"></li>
+
+                    <li id="RegularClassesLinks" class="dropdown @(Model.ActiveTab == IslamDewsburyWebsite.Models.ActiveTab.Classes? "active" : "")">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Classes</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                @Html.ActionLink("Islamic Studies", "IslamicStudies", "RegularClasses")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Tajweed", "Tajweed", "RegularClasses")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Taleemul Quran (Eng - Sisters)", "TaleemulQuranEnglish", "RegularClasses")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Taleemul Quran (Urdu - Sisters)", "TaleemulQuranUrdu", "RegularClasses")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Weekly Schedule", "WeeklySchedule", "RegularClasses")
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="divider-vertical-second-menu"></li>
+
+                    <li id="SistersLink" class="@(Model.ActiveTab == IslamDewsburyWebsite.Models.ActiveTab.Sisters? "active" : "")">
+                        @Html.ActionLink("Sisters", "Sisters", "Home")
+                    </li>
+                    <li class="divider-vertical-second-menu"></li>
+
+                    <li id="MadrassahLink" class="@(Model.ActiveTab == IslamDewsburyWebsite.Models.ActiveTab.Madrassah? "active" : "")">
+                        @Html.ActionLink("Madrassah", "Madrassah", "Home")
+                    </li>
+                    <li class="divider-vertical-second-menu"></li>
+
+                    <li id="EventsLink" class="@(Model.ActiveTab == IslamDewsburyWebsite.Models.ActiveTab.Events? "active" : "")">
+                        @Html.ActionLink("Events", "PreviousNewsAndEvents", "Home")
+                    </li>
+                    <li class="divider-vertical-second-menu"></li>
+
+                    <li id="ContactUsLink" class="@(Model.ActiveTab == IslamDewsburyWebsite.Models.ActiveTab.ContactUs? "active" : "")">
+                        @Html.ActionLink("Contact Us", "ContactUs", "Home")
+                    </li>
+                    <li class="divider-vertical-second-menu"></li>
+
+                    <li id="ServicesLinks" class="dropdown @(Model.ActiveTab == IslamDewsburyWebsite.Models.ActiveTab.Services? "active" : "")">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                @Html.ActionLink("Open Day", "Services", "Home", new { id = 1 }, null)
+                            </li>
+                            <li>
+                                @Html.ActionLink("Accepting Islam", "Services", "Home", new { id = 2 }, null)
+                            </li>
+                            <li>
+                                @Html.ActionLink("Wedding", "Services", "Home", new { id = 3 }, null)
+                            </li>
+                            <li>
+                                @Html.ActionLink("Funeral", "Services", "Home", new { id = 4 }, null)
+                            </li>
+                        </ul>
+                    </li>
+
+                    @*<li class="navbar-right">
+                            <button type="submit" class="btn btn-default">Donate</button>
+                        </li>*@
+
+                </ul>
+                @*<form class="navbar-form navbar-right" role="search">
+                        <button type="submit" class="btn btn-default">Donate</button>
+                    </form>*@
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="MainBody" class="page-header">
+            @if (Model.ShowRightBar)
+            {
+                <div class="row">
+                    <div class="col-sm-9">
+                        <!-- Page Content -->
+                        @RenderBody()
+                        <br />
+                        <br />
+                    </div>
+                    <div id="divRightBar" class="col-sm-3">
+                        @if (Model.SalaahTimes.HighlightedDate.HasValue)
+                        {
+                            <div class="panel divPanelSalaahTimes">
+                                <div id="divSalaahTimes">
+                                    @Html.Partial("_SalaahTimes", Model.SalaahTimes)
+                                </div>
+                            </div>
+                        }
+                        <a href="https://islamqa.info/en">
+                            <img id="divRightBarImage" src="~/Content/Images/IslamQA.jpg" />
+                        </a>
+                        <div id="divSupportNow" style="margin-top:40px;">
+                            <u>
+                                <b>
+                                    SUPPORT US NOW
+                                </b>
+                            </u>
+                        </div>
+                        <div id="divAccNoSortCode" style="margin-top:20px;">
+                            <p style="margin-left:7px;">
+                                Sort Code: &nbsp; &nbsp; 11-02-36
+                            </p>
+                            <p style="margin-left:7px;">
+                                Account No: &nbsp; 10055662
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <!-- Page Content -->
+                @RenderBody()
+            }
+
+            <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+            <script src="~/Scripts/bootstrap.min.js"></script>
+            <script src="~/Scripts/clock.js"></script>
+            <script src="~/Scripts/layout.js"></script>
+
+            @RenderSection("scripts", required: false)
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+        <br />
+        <p style="font-size:large;">
+            <u>
+                Contact Masjid
+            </u>
+        </p>
+        <br />
+        <p style="padding-left:10px;">
+            Islam Dewsbury
+            <br />3 Stoney Bank Street
+            <br />Dewsbury
+            <br />West Yorkshire
+            <br />WF13 3RJ
+        </p>
+        <p style="font-size:small; text-align:center;">
+            Copyright &copy; Islam Dewsbury 2017
+        </p>
+    </div>
+
+</body>
+</html>

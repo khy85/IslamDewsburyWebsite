@@ -1,0 +1,64 @@
+﻿@model IslamDewsburyWebsite.Models.GenericTabbedViewModel
+
+@{
+    ViewBag.Title = "Services";
+}
+
+<div style="width:100%">
+    <div class="container">
+
+        <div class="row">
+            <div class="col col-sm-8">
+                <h2 class="heading">Services</h2>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col col-sm-8 marginBelowHeading">
+
+                <ul id="myTab" class="nav nav-tabs nav-justified" style="font-weight:bolder;">
+                    <li class="@(@Model.TabNumber == 1 ? "active" : "")">
+                        <a href="#openDayTab" data-toggle="tab">Open Day</a>
+                    </li>
+                    <li class="@(@Model.TabNumber == 2 ? "active" : "")">
+                        <a href="#acceptingIslamTab" data-toggle="tab">Accepting Islam</a>
+                    </li>
+                    <li class="@(@Model.TabNumber == 3 ? "active" : "")">
+                        <a href="#weddingTab" data-toggle="tab">Wedding</a>
+                    </li>
+                    <li class="@(@Model.TabNumber == 4 ? "active" : "")">
+                        <a href="#funeralTab" data-toggle="tab">Funeral</a>
+                    </li>
+                </ul>
+
+                <div id="myTabContent" class="tab-content" style="padding-top:35px;">
+                    <div  id="openDayTab" class="tab-pane fade @(@Model.TabNumber == 1 ? "active in" : "")">
+                        <div style="font-size:18px; margin-bottom:15px;"><strong>Mosque Open Day</strong></div>
+                        <p>
+                            Coming soon ...
+                        </p>
+                    </div>
+                    <div id="acceptingIslamTab" class="tab-pane fade @(@Model.TabNumber == 2 ? "active in" : "")">
+                        <div style="font-size:18px; margin-bottom:15px;"><strong>Accepting Islam</strong></div>
+                        <p>
+                            Coming soon ...
+                        </p>
+                    </div>
+                    <div id="weddingTab" class="tab-pane fade @(@Model.TabNumber == 3 ? "active in" : "")">
+                        <div style="font-size:18px; margin-bottom:15px;"><strong>Nikkah and Wedding Service</strong></div>
+                        <p>
+                            Coming soon ...
+                        </p>
+                    </div>
+                    <div id="funeralTab" class="tab-pane fade @(@Model.TabNumber == 4 ? "active in" : "")">
+                        <div style="font-size:18px; margin-bottom:15px;"><strong>Funeral Services</strong></div>
+                        <p>
+                            Coming soon ...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

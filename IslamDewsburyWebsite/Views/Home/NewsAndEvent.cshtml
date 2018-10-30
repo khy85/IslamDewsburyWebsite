@@ -1,0 +1,35 @@
+﻿@model IslamDewsburyWebsite.Models.NewsAndEventViewModel
+
+@{
+    ViewBag.Title = @Model.LatestNewsEvents.Heading;
+}
+
+<div style="width:100%">
+    <div class="container">
+
+        <div class="row">
+            <div class="col col-sm-8">
+                <h2 class="heading">@Model.LatestNewsEvents.Heading</h2>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col col-sm-6 marginBelowHeading">
+                <img src="@Model.LatestNewsEvents.MediumImgLocation" title="@Model.LatestNewsEvents.Tooltip" style="border: 1px solid black;" />
+            </div>
+
+            <div class="col col-sm-3 marginBelowHeading">
+                <p style="margin-top:5px;">
+                    <b>Posted on : @Model.LatestNewsEvents.DisplayDate</b>
+                </p>
+
+                <p class="marginBelowHeading">
+                    @Model.LatestNewsEvents.DisplayContent
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</div>

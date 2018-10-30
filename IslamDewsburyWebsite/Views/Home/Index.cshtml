@@ -1,0 +1,58 @@
+﻿@model IslamDewsburyWebsite.Models.IndexViewModel
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<div class="row">
+    <div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-print">
+        <div class="panel panel-default divPanelSalaahTimes">
+            <div id="divSalaahTimesTop">
+                @Html.Partial("_SalaahTimes", Model.SalaahTimes)
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Header Carousel -->
+<div id="myCarousel" class="carousel slide div300PxHeight" data-ride="carousel" data-interval="4000">
+
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        @foreach (var img in Model.CarouselImages.OrderBy(x => x.OrderId))
+            {
+            <li data-target="#myCarousel" data-slide-to="@img" class="@img.CarouselClass"></li>
+        }
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner border">
+        @foreach (var img in Model.CarouselImages.OrderBy(x => x.OrderId))
+            {
+            <div class="item @img.CarouselClass">
+                <div class="fill">
+                    <img src="@Url.Content(@img.ImageLocation)" style="width:100%;" />
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
+
+<!-- Latest News and Events -->
+<div style="margin-top:50px;">
+    <h2><strong>Latest News/Events</strong></h2>
+    <br />
+    @Html.Partial("_LatestNews", Model.LatestNewsAndEvents)
+
+    <div style="display:block; text-align:right;">
+        @Html.ActionLink("View Previous News And Events", "PreviousNewsAndEvents", "Home", null, new { @class = "btn btn-default" })
+    </div>
+</div>

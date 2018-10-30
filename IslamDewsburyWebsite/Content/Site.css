@@ -1,0 +1,203 @@
+﻿/* Colours */
+.colorBrown {
+    color: #B05809;
+}
+
+.colorBlue {
+    color: #1173C0;
+}
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.container {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.border {
+    border: 1px solid black;
+}
+
+.boldText {
+    font-weight: bold;
+}
+
+.myHeading {
+    font-size: 30px;
+    text-align: center;
+}
+
+.page-header {
+    margin-top: 20px !important;
+}
+
+.heading {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.marginBelowHeading {
+    margin-top: 20px;
+}
+
+.marginLeft {
+    margin-left: 20px !important;
+}
+
+#Top-Page-Horizontal-Area {
+    height: 120px;
+    width: 100%;
+    /*background-color: #C40105;*/ /* Maroon colour */
+    /*background-color: #1173C0;*/ /* Original I Blue colour */
+    /*background-color: #B05809;*/ /* Original Brown Colour */
+    background: linear-gradient(#B05809,#D58137);
+}
+
+#TopHeader {
+    height: 120px;
+    background-color: white;
+    margin-top: -95px; /* Whereabouts the Top Header starts from at the top of the page  */
+    border-left: solid #B05809 1px;
+    border-right: solid #B05809 1px;
+    border-top: solid #B05809 1px;
+    padding-left: 20px;
+}
+
+#divMasjidAddress {
+    margin-top: 15px;
+}
+
+#divArabicDate {
+    margin-top: 8px;
+}
+
+#divEnglishDate {
+    margin-top: 3px;
+}
+
+#divTime {
+    font-size: 30px;
+    text-align: center;
+}
+
+@media all and (min-width: 320px) and (max-width: 767px) {
+
+    #divMasjidAddress, #divEnglishDate, #divTime, #hrDate, #divRightBar, #footer {
+        display: none;
+    }
+
+    #divArabicDate {
+        font-size: 10px;
+    }
+
+    #TopHeader, #Top-Page-Horizontal-Area {
+        height: 135px !important;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+    #divMasjidAddress {
+        font-size: 12px;
+    }
+
+    #divArabicDate,
+    #divEnglishDate,
+    #divAccNoSortCode {
+        font-size: 12px;
+    }
+
+    #divSupportNow
+    {
+        font-size: 18px;
+    }
+
+    #divTime {
+        font-size: 20px;
+    }
+
+    #TopHeader, #Top-Page-Horizontal-Area
+    {
+        height: 100px !important;
+    }
+
+    #TopHeader {
+        margin-top:-75px;
+    }
+}
+
+@media all and (min-width: 992px) {
+    #divMasjidAddress {
+        font-size: 16px;
+    }
+
+    #divArabicDate,
+    #divEnglishDate,
+    #divAccNoSortCode {
+        font-size: 18px;
+    }
+
+    #divSupportNow {
+        font-size: 24px;
+    }
+
+    #divTime {
+        font-size: 30px;
+    }
+}
+
+.divPanelSalaahTimes {
+    height: 300px;
+    width: 100%;
+}
+
+.panel {
+    display:inline-block;
+}
+
+.carousel-inner > .item {
+    width: 100%;
+}
+
+.carousel-indicators {
+    text-align: right !important;
+    left: 65% !important;
+    margin-bottom: -15px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    /*padding-left: 15px;
+    padding-right: 15px;*/
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+.backgroundImg {
+    background-image: url('Images/Background.jpg');
+}
+
+#divRightBar {
+    padding-left: 0px !important;
+    padding-right: 15px !important;
+}
+
+#divRightBarImage {
+    margin-top: 20px;
+    width: 100%
+}
+
+#footer {
+    background: linear-gradient(#B05809,#D58137);
+    color: white;
+    font-size: larger;
+    height: 230px;
+    padding-left: 200px;
+}

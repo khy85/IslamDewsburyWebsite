@@ -1,0 +1,68 @@
+﻿@model IslamDewsburyWebsite.Models.SalaahTimesTodayViewModel
+
+<div class="panel-heading">
+    <span class="fa fa-chevron-circle-left leftSalaahTimeToggle"></span>
+    <div class="displaySalaahDate">@Model.DisplayedDate</div>
+    <span class="fa fa-chevron-circle-right rightSalaahTimeToggle"></span>
+</div>
+<div class="panel-body" style="padding-top:0px;">
+    <table id="salaahTimesTable" class="table table-responsive table-striped">
+        <thead>
+            <tr>
+                <th>@Html.HiddenFor(model => model.HighlightedDate)</th>
+                <th>Adhaan</th>
+                <th>Iqamah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Fajr</td>
+                <td>@Model.FajrAdhan</td>
+                <td>@Model.FajrIqamah</td>
+            </tr>
+            <tr>
+                <td>Sunrise</td>
+                <td>@Model.Sunrise</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Zuhr</td>
+                <td>@Model.ZuhrAdhan</td>
+                <td>@Model.ZuhrIqamah</td>
+            </tr>
+            <tr>
+                <td>Asr</td>
+                <td>@Model.AsrAdhan</td>
+                <td>@Model.AsrIqamah</td>
+            </tr>
+            <tr>
+                <td>Maghrib</td>
+                <td>@Model.MaghribAdhan</td>
+                <td>@Model.MaghribIqamah</td>
+            </tr>
+            <tr>
+                <td>Isha</td>
+                <td>@Model.IshaAdhan</td>
+                <td>@Model.IshaIqamah</td>
+            </tr>
+            @if (Model.IsJummah)
+            {
+                <tr>
+                    <td>Jummah</td>
+                    <td>@Model.JummahKhutbah</td>
+                    <td>@Model.JummahSalaah</td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">
+                    <a href="@Model.DownloadUrl">
+                        <img src="~/Content/Images/PdfIcon.png" /> &nbsp;
+                        <span><strong> Download Timetable</strong></span>
+                    </a>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>

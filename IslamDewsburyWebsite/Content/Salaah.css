@@ -1,0 +1,72 @@
+﻿/* Salaah Timetable */
+
+@media all and (max-width: 767px) {
+    .displaySalaahDate,
+    #salaahTimesTable > tbody > tr > td,
+    #salaahTimesTable > tbody > tr > th,
+    #salaahTimesTable > thead > tr > td,
+    #salaahTimesTable > thead > tr > th,
+    #salaahTimesTable > tfoot > tr > td {
+        padding-bottom: 0px;
+        font-size: 13px;
+    }
+
+    .leftSalaahTimeToggle,
+    .rightSalaahTimeToggle {
+        font-size: 22px !important;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+    .displaySalaahDate,
+    #salaahTimesTable > tbody > tr > td,
+    #salaahTimesTable > tbody > tr > th,
+    #salaahTimesTable > thead > tr > td,
+    #salaahTimesTable > thead > tr > th,
+    #salaahTimesTable > tfoot > tr > td {
+        padding-bottom: 0px;
+        font-size: 10px;
+    }
+
+    .leftSalaahTimeToggle,
+    .rightSalaahTimeToggle {
+        font-size: 18px !important;
+    }
+}
+
+
+@media all and (min-width: 992px) {
+    .displaySalaahDate,
+    #salaahTimesTable > tbody > tr > td,
+    #salaahTimesTable > tbody > tr > th,
+    #salaahTimesTable > thead > tr > td,
+    #salaahTimesTable > thead > tr > th,
+    #salaahTimesTable > tfoot > tr > td {
+        padding-bottom: 0px;
+        font-size: 13px;
+    }
+
+    .leftSalaahTimeToggle,
+    .rightSalaahTimeToggle {
+        font-size: 22px !important;
+    }
+
+}
+
+.panel-heading {
+    padding-bottom: 3px;
+    padding-top: 5px;
+}
+
+.displaySalaahDate {
+    display: inline-block;
+    width: 70%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#salaahTimesTable > tfoot
+{
+    border: none !important;
+    margin-bottom:5px !important;
+}

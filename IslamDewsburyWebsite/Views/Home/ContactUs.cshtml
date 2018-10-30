@@ -1,0 +1,122 @@
+﻿@model IslamDewsburyWebsite.Models.ContactMessageViewModel
+
+@{
+    ViewBag.Title = "Contact Us";
+}
+
+@if (Model.MessageSent)
+{
+    <h2>Message was sent</h2>
+}
+
+<div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Contact Us
+            </h1>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="active">Contact</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- /.row -->
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Map Column -->
+        <div class="col-md-8">
+            <!-- Embedded Google Map -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9452.720282994884!2d-1.6562281007837314!3d53.67941603679774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879602aad5d687b%3A0x538a69aea0d84e15!2s3+Stoney+Bank+St%2C+Dewsbury+WF13+3RJ!5e0!3m2!1sen!2suk!4v1494704936177" height="450" frameborder="0" style="border:0; width:100%" allowfullscreen></iframe>
+        </div>
+        <!-- Contact Details Column -->
+        <div class="col-md-3 col-md-offset-1">
+            <h3>Contact Details</h3>
+            <p>
+                Islam Dewsbury
+                <br />3 Stoney Bank Street
+                <br />Dewsbury
+                <br />West Yorkshire
+                <br />WF13 3RJ
+            </p>
+            <p>
+                <i class="fa fa-phone"></i>
+                <abbr title="Phone">Phone</abbr>: 07827 963 264
+            </p>
+            <p>
+                <i class="fa fa-envelope-o"></i>
+                <abbr title="Email">Email</abbr>: <a href="mailto:Info@IslamDewsbury.org.uk">Info@IslamDewsbury.org.uk</a>
+            </p>
+            <ul class="list-unstyled list-inline list-social-icons">
+                <li>
+                    <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contact Form -->
+    <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+    <div class="row">
+        <div class="col-md-8">
+            <h3>Send us a Message</h3>
+            @using (Html.BeginForm())
+            {
+                <div class="control-group form-group">
+                    <div class="controls">
+                        @Html.LabelFor(x => x.FullName)
+                        @Html.TextBoxFor(x => x.FullName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.FullName)
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        @Html.LabelFor(x => x.PhoneNo)
+                        @Html.TextBoxFor(x => x.PhoneNo, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.PhoneNo)
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        @Html.LabelFor(x => x.EmailAddr)
+                        @Html.TextBoxFor(x => x.EmailAddr, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.EmailAddr)
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        @Html.LabelFor(x => x.Message)
+                        @Html.TextAreaFor(x => x.Message, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.Message)
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                    <br />
+                    <br />
+            }
+        </div>
+    </div>
+
+</div>
+
+@section scripts
+{
+    <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+    <script src="~/Scripts/jqBootstrapValidation.js"></script>
+    <script src="~/Scripts/contact_me.js"></script>
+}
+
+
