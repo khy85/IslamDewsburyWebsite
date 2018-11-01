@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -236,6 +237,7 @@
     <Content Include="Content\MonthlySalaahTimetable\May Orig 2018.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\May 2018.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\November 2017.jpg" />
+    <Content Include="Content\MonthlySalaahTimetable\November 2018.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\October 2017.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\October 2018.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\September 2018.jpg" />
