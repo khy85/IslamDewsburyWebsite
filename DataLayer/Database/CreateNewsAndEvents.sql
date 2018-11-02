@@ -23,14 +23,14 @@ INSERT INTO NewsAndEvents VALUES (GetDate(), '20180508', '/Content/Images/Latest
 INSERT INTO NewsAndEvents VALUES (GetDate(), '20180624', '/Content/Images/LatestNewsAndEvents/RulingsOnMiscarriage_Large.jpg', '/Content/Images/LatestNewsAndEvents/RulingsOnMiscarriage_Medium.jpg', '/Content/Images/LatestNewsAndEvents/RulingsOnMiscarriage_Small.jpg', 'Ramadan Dohra Quraan', 'Rulings on Miscarriage', 'Ustada Yasmin Ishaq is presenting a lecture on the rulings on Miscarriage. Sisters only Event. MUST Attend. 6pm After Asr on Sunday 8th July.')
 
 
-Declare @DateDisplayed DATETIME = ''
+Declare @DateDisplayed DATETIME = '20180909'
 Declare @EventLink varchar(max) = 'FiqhOfSalaah'
 Declare @Tooltip varchar(max) = 'Fiqh Of Salaah'
 Declare @Heading varchar(max) = 'Fiqh Of Salaah'
 Declare @Content varchar(max) = 'Ustada Yasmin Ishaq is presenting a lecture on the Fiqh of Salaah. Sisters only Event. MUST Attend. 4.45pm on Sunday 30th September.'
 INSERT INTO NewsAndEvents VALUES (GetDate(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
 
-Declare @DateDisplayed DATETIME = ''
+Declare @DateDisplayed DATETIME = '20181015'
 Declare @EventLink varchar(max) = 'FiveBeforeFive'
 Declare @Tooltip varchar(max) = 'Five before Five'
 Declare @Heading varchar(max) = 'Five before Five'
@@ -38,7 +38,7 @@ Declare @Content varchar(max) = 'Ustada Yasmin Ishaq is presenting a lecture on 
 INSERT INTO NewsAndEvents VALUES (GetDate(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
 
 
-Declare @DateDisplayed DATETIME = ''
+Declare @DateDisplayed DATETIME = '20181102'
 Declare @EventLink varchar(max) = 'MentalHealth'
 Declare @Tooltip varchar(max) = 'MentalHealth'
 Declare @Heading varchar(max) = 'Mental Health'
