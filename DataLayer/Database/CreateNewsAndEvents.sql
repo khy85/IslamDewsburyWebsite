@@ -21,3 +21,26 @@ INSERT INTO NewsAndEvents VALUES (GetDate(), '20170913', '/Content/Images/Latest
 INSERT INTO NewsAndEvents VALUES (GetDate(), '20180512', '/Content/Images/LatestNewsAndEvents/Ramadaan_Large.jpg', '/Content/Images/LatestNewsAndEvents/Ramadaan_Medium.jpg', '/Content/Images/LatestNewsAndEvents/Ramadaan_Small.jpg', 'Ramadaan Timetable', 'Ramadaan Timetable', 'After Ramadaan is announced, we will initially be doing Isha/Taraweeh at 10.30pm. Sisters are welcome. We have Daily (after Fajr) and Weekly (Sunday) Ramadaan reminders, as well as Daily Qur''aan Tafseer classes for Sisters in English and Urdu from 11am - 2pm.')
 INSERT INTO NewsAndEvents VALUES (GetDate(), '20180508', '/Content/Images/LatestNewsAndEvents/RamadanDohraQuraan_Large.jpg', '/Content/Images/LatestNewsAndEvents/RamadanDohraQuraan_Medium.jpg', '/Content/Images/LatestNewsAndEvents/RamadanDohraQuraan_Small.jpg', 'Ramadan Dohra Quraan', 'Ramadan Dohra Quraan', 'Qur''aan translation to be done by sister Maryam (English) and Sister Munazza (Urdu). It will be 1 Juz a day.')
 INSERT INTO NewsAndEvents VALUES (GetDate(), '20180624', '/Content/Images/LatestNewsAndEvents/RulingsOnMiscarriage_Large.jpg', '/Content/Images/LatestNewsAndEvents/RulingsOnMiscarriage_Medium.jpg', '/Content/Images/LatestNewsAndEvents/RulingsOnMiscarriage_Small.jpg', 'Ramadan Dohra Quraan', 'Rulings on Miscarriage', 'Ustada Yasmin Ishaq is presenting a lecture on the rulings on Miscarriage. Sisters only Event. MUST Attend. 6pm After Asr on Sunday 8th July.')
+
+
+Declare @DateDisplayed DATETIME = ''
+Declare @EventLink varchar(max) = 'FiqhOfSalaah'
+Declare @Tooltip varchar(max) = 'Fiqh Of Salaah'
+Declare @Heading varchar(max) = 'Fiqh Of Salaah'
+Declare @Content varchar(max) = 'Ustada Yasmin Ishaq is presenting a lecture on the Fiqh of Salaah. Sisters only Event. MUST Attend. 4.45pm on Sunday 30th September.'
+INSERT INTO NewsAndEvents VALUES (GetDate(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+Declare @DateDisplayed DATETIME = ''
+Declare @EventLink varchar(max) = 'FiveBeforeFive'
+Declare @Tooltip varchar(max) = 'Five before Five'
+Declare @Heading varchar(max) = 'Five before Five'
+Declare @Content varchar(max) = 'Ustada Yasmin Ishaq is presenting a lecture on the hadith around the Five things to take advantage of before five other matters take advantage of you. Sisters only Event. MUST Attend. 4.45pm on Sunday 28th October.'
+INSERT INTO NewsAndEvents VALUES (GetDate(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+
+Declare @DateDisplayed DATETIME = ''
+Declare @EventLink varchar(max) = 'MentalHealth'
+Declare @Tooltip varchar(max) = 'MentalHealth'
+Declare @Heading varchar(max) = 'Mental Health'
+Declare @Content varchar(max) = 'Ustada Yasmin Ishaq is presenting a lecture on Mental Health from an Islamic perspective. Sisters only Event. MUST Attend. 4pm on Sunday 25th November.'
+INSERT INTO NewsAndEvents VALUES (GetDate(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
