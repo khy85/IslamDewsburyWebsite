@@ -65,6 +65,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Database\December2018SalaahTimes.sql">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Database\November2018SalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
