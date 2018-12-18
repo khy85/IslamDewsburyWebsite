@@ -202,6 +202,12 @@
     <Content Include="Content\Images\LatestNewsAndEvents\FiveBeforeFive_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\FiveBeforeFive_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\FiveBeforeFive_Small.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\Ghusl_Large.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\Ghusl_Medium.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\Ghusl_Small.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\Hijab_Large.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\Hijab_Medium.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\Hijab_Small.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\IslamicStudies_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\IslamicStudies_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\IslamicStudies_Small.jpg" />
