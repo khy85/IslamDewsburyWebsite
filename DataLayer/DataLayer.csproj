@@ -69,7 +69,15 @@
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Database\February2019SalaahTimes.sql">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Database\January2019SalaahTimes.sql">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Database\March2019SalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
