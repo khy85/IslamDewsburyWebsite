@@ -60,3 +60,11 @@ Declare @Tooltip varchar(max) = 'Structured course on Death and Ghusl'
 Declare @Heading varchar(max) = 'Course on Death and Ghusl'
 Declare @Content varchar(max) = 'Ustada Yasmin Ishaq is presenting a course on Death and Ghusl. Sisters only Event. MUST Attend. After Maghrib on Sunday 27th January.'
 INSERT INTO NewsAndEvents VALUES (GetDate(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+
+Declare @DateDisplayed DATETIME = '20190224'
+Declare @EventLink varchar(max) = 'WomenOfParadise'
+Declare @Tooltip varchar(max) = 'Part 1 - Story of Aasiya'
+Declare @Heading varchar(max) = 'Women of Paradise - Story of Aasiya'
+Declare @Content varchar(max) = 'Ustada Yasmin Ishaq is presenting a course on the Women of Paradise. Sisters only Event. MUST Attend. After Maghrib on Sunday 24th February.'
+INSERT INTO NewsAndEvents VALUES (GetDate(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
