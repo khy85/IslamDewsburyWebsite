@@ -16,4 +16,7 @@ INSERT INTO Carousel (OrderId, ImageLocation, Tooltip, IsEnabled) VALUES (3, '~/
 INSERT INTO Carousel (OrderId, ImageLocation, Tooltip, IsEnabled) VALUES (4, '~/Content/Images/Carousel/Carousel_TaleemulQuraanClass.jpg', 'Taleemul Quraan', CAST(1 As Bit))
 INSERT INTO Carousel (OrderId, ImageLocation, Tooltip, IsEnabled) VALUES (5, '~/Content/Images/Carousel/Carousel_RamadanTimetable.jpg', 'Ramadaan Schedule', CAST(1 As Bit))
 
+Update Carousel Set OrderId = Id + 1
+insert into Carousel (OrderId, ImageLocation, Tooltip, IsEnabled) Values (1, '~/Content/Images/Carousel/Carousel_VisitMyMosque2019.jpg', 'Visit My Mosque Open Day', 1)
+
 Select * from Carousel

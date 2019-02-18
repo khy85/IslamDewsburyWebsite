@@ -61,10 +61,17 @@ Declare @Heading varchar(max) = 'Course on Death and Ghusl'
 Declare @Content varchar(max) = 'Ustada Yasmin Ishaq is presenting a course on Death and Ghusl. Sisters only Event. MUST Attend. After Maghrib on Sunday 27th January.'
 INSERT INTO NewsAndEvents VALUES (GetDate(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
 
-
 Declare @DateDisplayed DATETIME = '20190224'
 Declare @EventLink varchar(max) = 'WomenOfParadise'
 Declare @Tooltip varchar(max) = 'Part 1 - Story of Aasiya'
 Declare @Heading varchar(max) = 'Women of Paradise - Story of Aasiya'
 Declare @Content varchar(max) = 'Ustada Yasmin Ishaq is presenting a course on the Women of Paradise. Sisters only Event. MUST Attend. After Maghrib on Sunday 24th February.'
+INSERT INTO NewsAndEvents VALUES (GetDate(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+
+Declare @DateDisplayed DATETIME = '20190303'
+Declare @EventLink varchar(max) = 'VisitMyMosque_2019'
+Declare @Tooltip varchar(max) = 'Visit My Mosque'
+Declare @Heading varchar(max) = 'Visit My Mosque - Open Day'
+Declare @Content varchar(max) = 'Come and join IslamDewsbury for our annual Open Day. We will have guided Masjid tours, hear the call to the Islamic prayer, ask questions from the Imam, an Islamic exhibition, free food/refreshments, a Calligrapher and a goody bag for all. Mark your calendars as Sunday 3rd March from 12-4pm. If you have any questions, please feel free to contact us on 07827963264'
 INSERT INTO NewsAndEvents VALUES (GetDate(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
