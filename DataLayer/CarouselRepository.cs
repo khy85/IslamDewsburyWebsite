@@ -16,7 +16,7 @@ namespace DataLayer
 
         public List<Carousel> GetAll()
         {
-            var sql = "SELECT * FROM Carousel WHERE IsEnabled = 1";
+            var sql = "SELECT * FROM Carousel WHERE IsEnabled = 1 ORDER BY OrderId";
             return this.dbConnection.Query<Carousel>(sql).ToList();
         }
         

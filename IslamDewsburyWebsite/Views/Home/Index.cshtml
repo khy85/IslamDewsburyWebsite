@@ -1,7 +1,11 @@
 ﻿@model IslamDewsburyWebsite.Models.IndexViewModel
 
 @{
-    ViewBag.Title = "Home";
+                /**/
+
+                /**/
+
+                ViewBag.Title = "Home";
 }
 
 <div class="row">
@@ -20,7 +24,7 @@
     <!-- Indicators -->
     <ol class="carousel-indicators">
         @foreach (var img in Model.CarouselImages.OrderBy(x => x.OrderId))
-            {
+        {
             <li data-target="#myCarousel" data-slide-to="@img" class="@img.CarouselClass"></li>
         }
     </ol>
@@ -28,7 +32,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner border">
         @foreach (var img in Model.CarouselImages.OrderBy(x => x.OrderId))
-            {
+        {
             <div class="item @img.CarouselClass">
                 <div class="fill">
                     <img src="@Url.Content(@img.ImageLocation)" style="width:100%;" />

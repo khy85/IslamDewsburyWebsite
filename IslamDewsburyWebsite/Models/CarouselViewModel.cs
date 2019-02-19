@@ -10,7 +10,7 @@ namespace IslamDewsburyWebsite.Models
     {
         public CarouselViewModel(Carousel carousel)
         {
-            this.CarouselClass = carousel.Id == 1 ? "active" : "";
+            this.CarouselClass = carousel.OrderId == 1 ? "active" : "";
             this.OrderId = carousel.OrderId;
             this.ImageLocation = carousel.ImageLocation;
             this.TooltipMsg = carousel.Tooltip;
