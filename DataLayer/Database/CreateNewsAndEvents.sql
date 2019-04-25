@@ -83,3 +83,18 @@ Declare @Tooltip varchar(max) = 'Women of Paradise - Khadija RA'
 Declare @Heading varchar(max) = 'Women of Paradise - Khadija RA'
 Declare @Content varchar(max) = 'Come and join IslamDewsbury for part 3 of The Four Women of Paradise : The Story of Khadija RA with Umm Ayesha from Islam Bradford. Note - Ladies Only'
 INSERT INTO NewsAndEvents VALUES (GetDate(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+
+Declare @DateDisplayed DATETIME = '20190428'
+Declare @EventLink varchar(max) = 'WomenOfParadise_Khadijah'
+Declare @Tooltip varchar(max) = 'Women of Paradise - Khadija RA'
+Declare @Heading varchar(max) = 'Women of Paradise - Khadija RA'
+Declare @Content varchar(max) = 'Come and join IslamDewsbury for part 3 of The Four Women of Paradise : The Story of Khadija RA with Umm Ayesha from Islam Bradford. Note - Ladies Only'
+INSERT INTO NewsAndEvents VALUES (GetDate(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+Declare @DateDisplayed DATETIME = '20190518'
+Declare @EventLink varchar(max) = 'TasteRamadaan'
+Declare @Tooltip varchar(max) = 'Taste Ramadaan'
+Declare @Heading varchar(max) = 'Taste Ramadaan'
+Declare @Content varchar(max) = 'IslamDewsbury invites you to be a guest at an Iftar dinner (a meal to break the fast). Taste Ramadaan is a national initiative that welcomes people from all faiths & backgrounds interested in connecting with the community & learning about other cultures. Share in the blessings, build bonds and explore different cultures this Ramadan.'
+INSERT INTO NewsAndEvents VALUES (GetDate(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
