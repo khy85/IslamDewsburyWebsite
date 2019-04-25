@@ -193,6 +193,7 @@
     <Content Include="Content\Images\Carousel\Carousel_RamadanTimetable.jpg" />
     <Content Include="Content\Images\Carousel\Carousel_TaleemulQuraanClass.jpg" />
     <Content Include="Content\Images\Carousel\Carousel_TajweedClass.jpg" />
+    <Content Include="Content\Images\Carousel\Carousel_TasteRamadaan.jpg" />
     <Content Include="Content\Images\Carousel\Carousel_VisitMyMosque2019.jpg" />
     <Content Include="Content\Images\IslamDewsburyLogo.jpg" />
     <Content Include="Content\Images\IslamDewsburyText.jpg" />
@@ -232,6 +233,9 @@
     <Content Include="Content\Images\LatestNewsAndEvents\TaleemulQuraan_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\TaleemulQuraan_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\TaleemulQuraan_Small.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\TasteRamadaan_Large.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\TasteRamadaan_Medium.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\TasteRamadaan_Small.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\VisitMyMosque_2019_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\VisitMyMosque_2019_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\VisitMyMosque_2019_Small.jpg" />

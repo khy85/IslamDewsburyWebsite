@@ -19,4 +19,5 @@ INSERT INTO Carousel (OrderId, ImageLocation, Tooltip, IsEnabled) VALUES (5, '~/
 Update Carousel Set OrderId = Id + 1
 insert into Carousel (OrderId, ImageLocation, Tooltip, IsEnabled) Values (1, '~/Content/Images/Carousel/Carousel_VisitMyMosque2019.jpg', 'Visit My Mosque Open Day', 1)
 
+insert into Carousel (OrderId, ImageLocation, Tooltip, IsEnabled) Values (7, '~/Content/Images/Carousel/Carousel_TasteRamadaan.jpg', 'Taste Ramadaan', 1)
 Select * from Carousel
