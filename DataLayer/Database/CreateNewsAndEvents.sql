@@ -75,3 +75,11 @@ Declare @Tooltip varchar(max) = 'Visit My Mosque'
 Declare @Heading varchar(max) = 'Visit My Mosque - Open Day'
 Declare @Content varchar(max) = 'Come and join IslamDewsbury for our annual Open Day. We will have guided Masjid tours, hear the call to the Islamic prayer, ask questions from the Imam, an Islamic exhibition, free food/refreshments, a Calligrapher and a goody bag for all. Mark your calendars as Sunday 3rd March from 12-4pm. If you have any questions, please feel free to contact us on 07827963264'
 INSERT INTO NewsAndEvents VALUES (GetDate(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+
+Declare @DateDisplayed DATETIME = '20190428'
+Declare @EventLink varchar(max) = 'WomenOfParadise_Khadijah'
+Declare @Tooltip varchar(max) = 'Women of Paradise - Khadija RA'
+Declare @Heading varchar(max) = 'Women of Paradise - Khadija RA'
+Declare @Content varchar(max) = 'Come and join IslamDewsbury for part 3 of The Four Women of Paradise : The Story of Khadija RA with Umm Ayesha from Islam Bradford. Note - Ladies Only'
+INSERT INTO NewsAndEvents VALUES (GetDate(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)

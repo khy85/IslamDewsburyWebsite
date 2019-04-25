@@ -237,6 +237,9 @@
     <Content Include="Content\Images\LatestNewsAndEvents\VisitMyMosque_2019_Small.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\WeeklyClasses.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\WeeklyClassesForSisters.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\WomenOfParadise_Khadijah_Large.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\WomenOfParadise_Khadijah_Medium.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\WomenOfParadise_Khadijah_Small.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\WomenOfParadise_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\WomenOfParadise_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\WomenOfParadise_Small.jpg" />
