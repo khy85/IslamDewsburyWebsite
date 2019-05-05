@@ -98,3 +98,11 @@ Declare @Tooltip varchar(max) = 'Taste Ramadaan'
 Declare @Heading varchar(max) = 'Taste Ramadaan'
 Declare @Content varchar(max) = 'IslamDewsbury invites you to be a guest at an Iftar dinner (a meal to break the fast). Taste Ramadaan is a national initiative that welcomes people from all faiths & backgrounds interested in connecting with the community & learning about other cultures. Share in the blessings, build bonds and explore different cultures this Ramadan.'
 INSERT INTO NewsAndEvents VALUES (GetDate(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+
+Declare @DateDisplayed DATETIME = '20190505'
+Declare @EventLink varchar(max) = 'Ramadaan2019'
+Declare @Tooltip varchar(max) = 'Ramadaan 2019'
+Declare @Heading varchar(max) = 'Ramadaan 2019'
+Declare @Content varchar(max) = 'Ramadaan 2019 Timetable'
+INSERT INTO NewsAndEvents VALUES (GetDate(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)

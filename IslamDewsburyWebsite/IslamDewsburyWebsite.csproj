@@ -218,6 +218,9 @@
     <Content Include="Content\Images\LatestNewsAndEvents\MentalHealth_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\MentalHealth_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\MentalHealth_Small.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\Ramadaan2019_Large.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\Ramadaan2019_Medium.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\Ramadaan2019_Small.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Ramadaan_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Ramadaan_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Ramadaan_Small.jpg" />
