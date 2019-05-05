@@ -16,7 +16,7 @@ DECLARE @JumAd DATETIME = NULL
 DECLARE @JumIq DATETIME = NULL
 INSERT INTO SalaahTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, FajrAdhan, FajrIqamah, Sunrise, ZuhrAdhan, ZuhrIqamah, AsrAdhan, AsrIqamah, MaghribAdhan, MaghribIqamah, IshaAdhan, IshaIqamah, JummahKhutbah, JummahIqamah) VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrAd, @FajrIq, @Sunrise, @ZuhrAd, @ZuhrIq,  @AsrAd, @AsrIq, @MaghAd,  @MaghAd, @IshAd,  @IshIq, @JumAd, @JumIq)
 
-SET @SalaahDate = '20180602'
+SET @SalaahDate = '20190602'
 SET @HijriDay = @HijriDay + 1
 SET @FajrAd = @SalaahDate + '02:57'
 SET @Sunrise = @SalaahDate + '04:42'
@@ -27,7 +27,7 @@ SET @FajrIq = @SalaahDate + '03:17'
 SET @MaghAd = @SalaahDate + '21:32'
 INSERT INTO SalaahTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, FajrAdhan, FajrIqamah, Sunrise, ZuhrAdhan, ZuhrIqamah, AsrAdhan, AsrIqamah, MaghribAdhan, MaghribIqamah, IshaAdhan, IshaIqamah, JummahKhutbah, JummahIqamah) VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrAd, @FajrIq, @Sunrise, @ZuhrAd, @ZuhrIq,  @AsrAd, @AsrIq, @MaghAd,  @MaghAd, @IshAd,  @IshIq, @JumAd, @JumIq)
 
-SET @SalaahDate = '20180603'
+SET @SalaahDate = '20190603'
 SET @HijriDay = @HijriDay + 1
 SET @FajrAd = @SalaahDate + '02:56'
 SET @Sunrise = @SalaahDate + '04:41'
@@ -38,7 +38,7 @@ SET @FajrIq = @SalaahDate + '03:16'
 SET @MaghAd = @SalaahDate + '21:33'
 INSERT INTO SalaahTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, FajrAdhan, FajrIqamah, Sunrise, ZuhrAdhan, ZuhrIqamah, AsrAdhan, AsrIqamah, MaghribAdhan, MaghribIqamah, IshaAdhan, IshaIqamah, JummahKhutbah, JummahIqamah) VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrAd, @FajrIq, @Sunrise, @ZuhrAd, @ZuhrIq,  @AsrAd, @AsrIq, @MaghAd,  @MaghAd, @IshAd,  @IshIq, @JumAd, @JumIq)
 
-SET @SalaahDate = '20180604'
+SET @SalaahDate = '20190604'
 SET @HijriDay = @HijriDay + 1
 SET @FajrAd = @SalaahDate + '02:55'
 SET @Sunrise = @SalaahDate + '04:40'
