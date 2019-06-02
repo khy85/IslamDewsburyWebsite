@@ -18,7 +18,8 @@
             <div style="font-size:18px;"><strong>@newsEvent.Heading</strong></div>
             <div>
                 <p style="word-wrap:break-word; margin-top:5px;">
-                    @newsEvent.DisplayContent
+                    @Html.Raw(@newsEvent.DisplayContent)
+                    
                     @if (newsEvent.ContentReadMore)
                     {
                         <text>....</text>
