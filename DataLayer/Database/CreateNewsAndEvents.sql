@@ -117,6 +117,6 @@ INSERT INTO NewsAndEvents VALUES (GetDate(), @DateDisplayed, '/Content/Images/La
 Declare @DateDisplayed DATETIME = '20190630'
 Declare @EventLink varchar(max) = 'Duaa'
 Declare @Tooltip varchar(max) = 'Duaa - The Weapon of the Believer'
-Declare @Heading varchar(max) = 'WDuaa - The Weapon of the Believer'
+Declare @Heading varchar(max) = 'Duaa - The Weapon of the Believer'
 Declare @Content varchar(max) = 'Come and join IslamDewsbury for a study on Duaa - the weapon of the believer with Ustada Yomna. Note - Ladies Only'
 INSERT INTO NewsAndEvents VALUES (GetDate(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)

@@ -14,7 +14,7 @@ namespace IslamDewsburyWebsite.Models
         public LatestNewsEventsViewModel(NewsAndEvent newsAndEvent)
         {
             this.Id = newsAndEvent.Id;
-            this.CreatedDisplayDate = newsAndEvent.DateDisplayed;
+            this.CreatedDisplayDate = newsAndEvent.UploadedDate;
             this.DisplayDateDay = newsAndEvent.DateDisplayed.ToString("dd");
             this.DisplayDateMonth = CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(newsAndEvent.DateDisplayed.Month);
             this.DisplayDateYear = newsAndEvent.DateDisplayed.Year.ToString();
