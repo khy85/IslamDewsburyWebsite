@@ -106,3 +106,17 @@ Declare @Tooltip varchar(max) = 'Ramadaan 2019'
 Declare @Heading varchar(max) = 'Ramadaan 2019'
 Declare @Content varchar(max) = 'Ramadaan 2019 Timetable'
 INSERT INTO NewsAndEvents VALUES (GetDate(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+Declare @DateDisplayed DATETIME = '20190526'
+Declare @EventLink varchar(max) = 'WomenOfParadise_Fatimah'
+Declare @Tooltip varchar(max) = 'Women of paradise - Fatimah RA'
+Declare @Heading varchar(max) = 'Women of paradise - Fatimah RA'
+Declare @Content varchar(max) = 'Come and join IslamDewsbury for part 4 of The Four Women of Paradise : The Story of Fatimah RA with Ustada Yasmin. Note - Ladies Only'
+INSERT INTO NewsAndEvents VALUES (GetDate(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+Declare @DateDisplayed DATETIME = '20190630'
+Declare @EventLink varchar(max) = 'Duaa'
+Declare @Tooltip varchar(max) = 'Duaa - The Weapon of the Believer'
+Declare @Heading varchar(max) = 'WDuaa - The Weapon of the Believer'
+Declare @Content varchar(max) = 'Come and join IslamDewsbury for a study on Duaa - the weapon of the believer with Ustada Yomna. Note - Ladies Only'
+INSERT INTO NewsAndEvents VALUES (GetDate(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
