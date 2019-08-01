@@ -267,6 +267,7 @@
     <Content Include="Content\MonthlySalaahTimetable\April 2018.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\April 2019.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\August 2018.jpg" />
+    <Content Include="Content\MonthlySalaahTimetable\August 2019.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\December 2017.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\December 2018.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\February 2018.jpg" />
@@ -287,6 +288,7 @@
     <Content Include="Content\MonthlySalaahTimetable\October 2017.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\October 2018.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\September 2018.jpg" />
+    <Content Include="Content\MonthlySalaahTimetable\September 2019.jpg" />
     <Content Include="Content\Salaah.css" />
     <Content Include="Content\NavigationBar.css" />
     <Content Include="favicon.ico" />
