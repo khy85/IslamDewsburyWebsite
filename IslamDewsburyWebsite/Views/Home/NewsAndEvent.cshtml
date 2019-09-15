@@ -15,43 +15,20 @@
 
         <div class="row">
 
-            @if (!String.IsNullOrEmpty(Model.LatestNewsEvents.MediumImgLocation))
-            {
-                <div class="col col-sm-6 marginBelowHeading">
-                    <img src="@Model.LatestNewsEvents.MediumImgLocation" title="@Model.LatestNewsEvents.Tooltip" style="border: 1px solid black;" />
-                </div>
+            <div class="col col-sm-6 marginBelowHeading">
+                <img src="@Model.LatestNewsEvents.MediumImgLocation" title="@Model.LatestNewsEvents.Tooltip" style="border: 1px solid black;" />
+            </div>
 
-                <div class="col col-sm-3 marginBelowHeading">
-                    <p style="margin-top:5px;">
-                        <b>Posted on : @Model.LatestNewsEvents.CreatedDisplayDate</b>
-                    </p>
+            <div class="col col-sm-3 marginBelowHeading">
+                <p style="margin-top:5px;">
+                    <b>Posted on : @Model.LatestNewsEvents.CreatedDisplayDate</b>
+                </p>
 
-                    <p class="marginBelowHeading">
-                        @Html.Raw(@Model.LatestNewsEvents.DisplayContent)
-                    </p>
-                </div>
-            }
-            else
-            {
-                <div class="col col-sm-9 marginBelowHeading">
-                    <p style="margin-top:5px;">
-                        <b>Posted on : @Model.LatestNewsEvents.CreatedDisplayDate</b>
-                    </p>
+                <p class="marginBelowHeading">
+                    @Html.Raw(@Model.LatestNewsEvents.DisplayContent)
+                </p>
+            </div>
 
-                    <p class="marginBelowHeading">
-                        @Model.LatestNewsEvents.DisplayContent
-                    <p>
-                        <b>
-                            <u>
-                                Please only complete the survey if you attended the Masjid in person.
-                            </u>
-                        </b>
-                    </p>
-                    <div style="display:block; text-align:right;">
-                        <a href="https://www.smartsurvey.co.uk/s/8EZ76/" class="btn btn-default">Ramadan 2019 Feedback</a>
-                    </div>
-                </div>
-            }
         </div>
 
     </div>
