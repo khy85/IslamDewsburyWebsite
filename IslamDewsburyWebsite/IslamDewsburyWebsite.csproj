@@ -197,6 +197,9 @@
     <Content Include="Content\Images\Carousel\Carousel_VisitMyMosque2019.jpg" />
     <Content Include="Content\Images\IslamDewsburyLogo.jpg" />
     <Content Include="Content\Images\IslamDewsburyText.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\BirdsAndTheBees_Large.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\BirdsAndTheBees_Medium.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\BirdsAndTheBees_Small.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Duaa_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Duaa_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Duaa_Small.jpg" />
@@ -221,6 +224,9 @@
     <Content Include="Content\Images\LatestNewsAndEvents\MentalHealth_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\MentalHealth_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\MentalHealth_Small.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\PropheticParenting_Large.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\PropheticParenting_Medium.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\PropheticParenting_Small.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Ramadaan2019_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Ramadaan2019_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Ramadaan2019_Small.jpg" />
@@ -248,6 +254,9 @@
     <Content Include="Content\Images\LatestNewsAndEvents\VisitMyMosque_2019_Small.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\WeeklyClasses.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\WeeklyClassesForSisters.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\WhosIsAllah_Large.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\WhosIsAllah_Medium.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\WhosIsAllah_Small.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\WomenOfParadise_Fatimah_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\WomenOfParadise_Fatimah_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\WomenOfParadise_Fatimah_Small.jpg" />

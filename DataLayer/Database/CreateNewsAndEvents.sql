@@ -89,3 +89,26 @@ Set @Tooltip = 'Duaa - The Weapon of the Believer'
 Set @Heading = 'Duaa - The Weapon of the Believer'
 Set @Content = 'Come and join IslamDewsbury for a study on Duaa - the weapon of the believer with Ustada Yomna. Note - Ladies Only'
 INSERT INTO NewsAndEvents VALUES (@DateDisplayed, @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+Set @DateDisplayed = '20190421'
+Set @EventLink = 'BirdsAndTheBees'
+Set @Tooltip = 'The Birds and the Bees'
+Set @Heading = 'The Birds and the Bees'
+Set @Content = 'Workshop on Sex and Relationship education by Imam Hussain Sattar'
+INSERT INTO NewsAndEvents VALUES (@DateDisplayed, @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+
+Set @DateDisplayed = '20190825'
+Set @EventLink = 'PropheticParenting'
+Set @Tooltip = 'Prophetic Parenting'
+Set @Heading = 'Prophetic Parenting'
+Set @Content = 'Ustada Yasmin Ishaq is presenting a lecture on Prophetic Parenting. Sisters only Event.'
+INSERT INTO NewsAndEvents VALUES (@DateDisplayed, @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+
+Set @DateDisplayed = '20190929'
+Set @EventLink = 'WhoIsAllah'
+Set @Tooltip = 'Who Is Allah'
+Set @Heading = 'Who Is Allah'
+Set @Content = 'Ustada Yasmin Ishaq is presenting a talk on Allah SWT. Sisters only Event.'
+INSERT INTO NewsAndEvents VALUES (GETDATE(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
