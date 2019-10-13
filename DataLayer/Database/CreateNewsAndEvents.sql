@@ -112,3 +112,19 @@ Set @Tooltip = 'Who Is Allah'
 Set @Heading = 'Who Is Allah'
 Set @Content = 'Ustada Yasmin Ishaq is presenting a talk on Allah SWT. Sisters only Event.'
 INSERT INTO NewsAndEvents VALUES (GETDATE(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+
+Set @DateDisplayed = '20191025'
+Set @EventLink = 'PreparingForDeath'
+Set @Tooltip = 'Preparing For Death'
+Set @Heading = 'Preparing For Death'
+Set @Content = 'Sheikh Wajid Malik (Imam of Middlesboro Central Mosque) will be delivering a talk on Preparing For Death as part of "The Journey of Certainty" series. After Isha at 8pm.'
+INSERT INTO NewsAndEvents VALUES (GETDATE(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+
+Set @DateDisplayed = '20191027'
+Set @EventLink = 'LordOfTheWorlds'
+Set @Tooltip = 'Lord Of The Worlds - An explanation of some of the beautiful names of Allah'
+Set @Heading = 'Lord Of The Worlds'
+Set @Content = 'Ustadha Yomna will be delivering a reminder on some of the beautiful names of Allah and its explanation. Sisters only event.'
+INSERT INTO NewsAndEvents VALUES (GETDATE(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
