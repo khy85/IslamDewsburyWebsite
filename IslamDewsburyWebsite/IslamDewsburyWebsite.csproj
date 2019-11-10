@@ -218,6 +218,9 @@
     <Content Include="Content\Images\LatestNewsAndEvents\IslamicStudies_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\IslamicStudies_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\IslamicStudies_Small.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\LifeInTheGrave_Large.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\LifeInTheGrave_Medium.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\LifeInTheGrave_Small.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\LordOfTheWorlds_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\LordOfTheWorlds_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\LordOfTheWorlds_Small.jpg" />
@@ -255,6 +258,9 @@
     <Content Include="Content\Images\LatestNewsAndEvents\TasteRamadaan_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\TasteRamadaan_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\TasteRamadaan_Small.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\TheProphetsSmile_Large.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\TheProphetsSmile_Medium.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\TheProphetsSmile_Small.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\VisitMyMosque_2019_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\VisitMyMosque_2019_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\VisitMyMosque_2019_Small.jpg" />

@@ -128,3 +128,19 @@ Set @Tooltip = 'Lord Of The Worlds - An explanation of some of the beautiful nam
 Set @Heading = 'Lord Of The Worlds'
 Set @Content = 'Ustadha Yomna will be delivering a reminder on some of the beautiful names of Allah and its explanation. Sisters only event.'
 INSERT INTO NewsAndEvents VALUES (GETDATE(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+
+Set @DateDisplayed = '20191124'
+Set @EventLink = 'ProphetsSmile'
+Set @Tooltip = 'The Prophet''s Smile'
+Set @Heading = 'The Prophet''s Smile'
+Set @Content = 'Ustadha Yomna will be delivering a reminder on the characteristics of the Prophet SAW. Sisters only event.'
+INSERT INTO NewsAndEvents VALUES (GETDATE(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+
+Set @DateDisplayed = '20191129'
+Set @EventLink = 'LifeInTheGrave'
+Set @Tooltip = 'Life in the Grave'
+Set @Heading = 'Life in the Grave'
+Set @Content = 'Ustadh Nasir Al-Libee, a graduate of the Islamic University of Minnesota, will be delivering a reminder on the life in the grave. Friday 27th November, after Isha'
+INSERT INTO NewsAndEvents VALUES (GETDATE(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
