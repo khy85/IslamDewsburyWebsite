@@ -144,3 +144,24 @@ Set @Tooltip = 'Life in the Grave'
 Set @Heading = 'Life in the Grave'
 Set @Content = 'Ustadh Nasir Al-Libee, a graduate of the Islamic University of Minnesota, will be delivering a reminder on the life in the grave. Friday 27th November, after Isha'
 INSERT INTO NewsAndEvents VALUES (GETDATE(), @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+Set @DateDisplayed = '20191227'
+Set @EventLink = 'DayOfJudgement'
+Set @Tooltip = 'Day Of Judgement'
+Set @Heading = 'Day Of Judgement'
+Set @Content = 'Talk by Qari Zaka Ullah Saleem from Green Lane Masjid. After Isha (7pm) on Friday 27th December.'
+INSERT INTO NewsAndEvents VALUES (@DateDisplayed, @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+Set @DateDisplayed = '20191229'
+Set @EventLink = 'MajorSignsOfJudgementDay'
+Set @Tooltip = '10 Major Signs Of Judgement Day'
+Set @Heading = '10 Major Signs Of Judgement Day'
+Set @Content = 'Ustadha Yomna is delivering a talk on the 10 Major Signs of Judgement Day after Asr prayer (2.15) on Sunday 29th December. Sisters ONLY event'
+INSERT INTO NewsAndEvents VALUES (@DateDisplayed, @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+Set @DateDisplayed = '20200105'
+Set @EventLink = 'GhuslWorkshop'
+Set @Tooltip = 'A structured and practical workshop on death & ghusl'
+Set @Heading = 'Death & Ghusl'
+Set @Content = 'Every soul will taste death. Join us as Ustaadh Hussain will be delivering a structured and practical workshop on death & the ghusl process. 5th January after Maghrib (4.06pm)'
+INSERT INTO NewsAndEvents VALUES (@DateDisplayed, @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)

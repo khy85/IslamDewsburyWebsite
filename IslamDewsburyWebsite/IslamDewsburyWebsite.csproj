@@ -200,6 +200,9 @@
     <Content Include="Content\Images\LatestNewsAndEvents\BirdsAndTheBees_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\BirdsAndTheBees_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\BirdsAndTheBees_Small.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\DayOfJudgement_Large.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\DayOfJudgement_Medium.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\DayOfJudgement_Small.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Duaa_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Duaa_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Duaa_Small.jpg" />
@@ -209,6 +212,9 @@
     <Content Include="Content\Images\LatestNewsAndEvents\FiveBeforeFive_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\FiveBeforeFive_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\FiveBeforeFive_Small.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\GhuslWorkshop_Large.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\GhuslWorkshop_Medium.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\GhuslWorkshop_Small.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Ghusl_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Ghusl_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Ghusl_Small.jpg" />
@@ -227,6 +233,9 @@
     <Content Include="Content\Images\LatestNewsAndEvents\Madrassah_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Madrassah_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Madrassah_Small.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\MajorSignsOfJudgementDay_Large.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\MajorSignsOfJudgementDay_Medium.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\MajorSignsOfJudgementDay_Small.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\MentalHealth_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\MentalHealth_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\MentalHealth_Small.jpg" />
@@ -291,10 +300,13 @@
     <Content Include="Content\MonthlySalaahTimetable\August 2019.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\December 2017.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\December 2018.jpg" />
+    <Content Include="Content\MonthlySalaahTimetable\December 2019.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\February 2018.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\February 2019.jpg" />
+    <Content Include="Content\MonthlySalaahTimetable\February 2020.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\January 2018.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\January 2019.jpg" />
+    <Content Include="Content\MonthlySalaahTimetable\January 2020.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\July 2018.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\July 2019.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\June 2019.jpg" />
@@ -306,8 +318,10 @@
     <Content Include="Content\MonthlySalaahTimetable\May 2018.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\November 2017.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\November 2018.jpg" />
+    <Content Include="Content\MonthlySalaahTimetable\November 2019.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\October 2017.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\October 2018.jpg" />
+    <Content Include="Content\MonthlySalaahTimetable\October 2019.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\September 2018.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\September 2019.jpg" />
     <Content Include="Content\Salaah.css" />
