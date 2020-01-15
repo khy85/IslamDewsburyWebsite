@@ -200,9 +200,15 @@
     <Content Include="Content\Images\LatestNewsAndEvents\BirdsAndTheBees_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\BirdsAndTheBees_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\BirdsAndTheBees_Small.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\CleanlinessForGirls_Large.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\CleanlinessForGirls_Medium.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\CleanlinessForGirls_Small.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\DayOfJudgement_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\DayOfJudgement_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\DayOfJudgement_Small.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\Divorce_Large.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\Divorce_Medium.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\Divorce_Small.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Duaa_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Duaa_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Duaa_Small.jpg" />
@@ -239,6 +245,9 @@
     <Content Include="Content\Images\LatestNewsAndEvents\MentalHealth_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\MentalHealth_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\MentalHealth_Small.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\ParadiseDescription_Large.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\ParadiseDescription_Medium.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\ParadiseDescription_Small.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\PreparingForDeath_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\PreparingForDeath_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\PreparingForDeath_Small.jpg" />
