@@ -165,3 +165,24 @@ Set @Tooltip = 'A structured and practical workshop on death & ghusl'
 Set @Heading = 'Death & Ghusl'
 Set @Content = 'Every soul will taste death. Join us as Ustaadh Hussain will be delivering a structured and practical workshop on death & the ghusl process. 5th January after Maghrib (4.06pm)'
 INSERT INTO NewsAndEvents VALUES (@DateDisplayed, @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+Set @DateDisplayed = '20200119'
+Set @EventLink = 'CleanlinessForGirls'
+Set @Tooltip = 'Cleanliness and Purification for girls'
+Set @Heading = 'Cleanliness and Purification for girls'
+Set @Content = 'Learn about the rulings of Wudhu, Ghusl & Purification in Islam by Ustadha Umm Eyesha. 1pm on Sunday 19th January 2020'
+INSERT INTO NewsAndEvents VALUES (@DateDisplayed, @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+Set @DateDisplayed = '20200126'
+Set @EventLink = 'Divorce'
+Set @Tooltip = 'Effects of Divorce'
+Set @Heading = 'Effects of Divorce'
+Set @Content = 'The effects of Divorce according to the Quraan & Sunnah by Ustadha Yasmin. Sisters only. Sunday 26th January after Maghrib (4.41pm)'
+INSERT INTO NewsAndEvents VALUES (@DateDisplayed, @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+Set @DateDisplayed = '20200131'
+Set @EventLink = 'ParadiseDescription'
+Set @Tooltip = 'Description of Paradise'
+Set @Heading = 'Description of Paradise'
+Set @Content = 'A description of Paradise delivered by Ustaad Ehsan Arshad (Graduate of the University of Madinah). Friday 31st January after Isha (7pm)'
+INSERT INTO NewsAndEvents VALUES (@DateDisplayed, @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
