@@ -65,6 +65,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Database\April2020SalaahTimes.sql">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Database\April2019SalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
@@ -99,6 +103,10 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Database\June2019SalaahTimes.sql" />
+    <Content Include="Database\March2020SalaahTimes.sql">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Database\March2019SalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>

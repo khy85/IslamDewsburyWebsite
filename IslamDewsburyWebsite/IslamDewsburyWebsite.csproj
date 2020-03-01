@@ -305,6 +305,7 @@
     <Content Include="Content\modern-business.css" />
     <Content Include="Content\MonthlySalaahTimetable\April 2018.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\April 2019.jpg" />
+    <Content Include="Content\MonthlySalaahTimetable\April 2020.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\August 2018.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\August 2019.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\December 2017.jpg" />
@@ -322,6 +323,7 @@
     <Content Include="Content\MonthlySalaahTimetable\March 2018.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\June 2018.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\March 2019.jpg" />
+    <Content Include="Content\MonthlySalaahTimetable\March 2020.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\May 2019.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\May Orig 2018.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\May 2018.jpg" />
