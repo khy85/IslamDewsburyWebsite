@@ -111,6 +111,10 @@
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Database\Ramadan2020SalaahTimes.sql">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Database\May2019SalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>

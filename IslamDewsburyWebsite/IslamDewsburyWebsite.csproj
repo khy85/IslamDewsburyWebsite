@@ -190,6 +190,7 @@
     <Content Include="Content\Images\BasmalahWithTranslation.png" />
     <Content Include="Content\Images\Carousel\Carousel_IslamicStudiesClass.jpg" />
     <Content Include="Content\Images\Carousel\Carousel_MadrassahClass.jpg" />
+    <Content Include="Content\Images\Carousel\Carousel_RamadanTimetable2020.jpg" />
     <Content Include="Content\Images\Carousel\Carousel_RamadanTimetable.jpg" />
     <Content Include="Content\Images\Carousel\Carousel_TaleemulQuraanClass.jpg" />
     <Content Include="Content\Images\Carousel\Carousel_TajweedClass.jpg" />
@@ -325,6 +326,7 @@
     <Content Include="Content\MonthlySalaahTimetable\March 2019.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\March 2020.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\May 2019.jpg" />
+    <Content Include="Content\MonthlySalaahTimetable\May 2020.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\May Orig 2018.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\May 2018.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\November 2017.jpg" />
