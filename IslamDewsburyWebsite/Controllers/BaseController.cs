@@ -1,9 +1,6 @@
 ﻿using CoreLibrary;
 using DataLayer;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace IslamDewsburyWebsite.Controllers
@@ -13,6 +10,7 @@ namespace IslamDewsburyWebsite.Controllers
         public ISalaahTimeRepository SalaahTimesRepo;
         public ICarouselRepository CarouselRepo;
         public INewsAndEventRepository NewsAndEventRepo;
+        public IDonationRepository DonationRepo;
 
         public SalaahTime TodaySalaahTime;
 
@@ -23,6 +21,7 @@ namespace IslamDewsburyWebsite.Controllers
 
             this.CarouselRepo = new CarouselRepository();
             this.NewsAndEventRepo = new NewsAndEventRepository();
+            this.DonationRepo = new DonationRepository();
         }
 
     }

@@ -201,3 +201,36 @@ body {
     height: 230px;
     padding-left: 200px;
 }
+
+.box {
+    max-width: 90%;
+    background-color: white;
+    height: 95%;
+    padding: 1em 4em 1em 2em;
+    border: solid 1px #ccc;
+    margin: 0 auto;
+}
+
+.labelSetting {
+    width:25%;
+}
+
+.textBoxSetting {
+    border: 1px solid #ccc;
+    height: 35px;
+    line-height: 35px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    color: #333;
+    margin: 0;
+    padding: 1px 12px;
+}
+
+.marginBottom {
+    margin-bottom:10px;
+}
+
+.required {
+    color: red;
+    margin-left:5px;
+}

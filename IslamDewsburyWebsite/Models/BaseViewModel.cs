@@ -108,6 +108,10 @@ namespace IslamDewsburyWebsite.Models
         Madrassah = 5,
         Events = 6,
         ContactUs = 7,
-        Services = 8
+        Services = 8,
+        Donate = 9,
+        DonateDD = 10,
+        DonationSucceeded = 11,
+        DonationFailed = 12
     }
 }

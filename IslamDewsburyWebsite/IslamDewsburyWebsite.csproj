@@ -62,6 +62,12 @@
     <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
       <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PayPal, Version=1.9.1.0, Culture=neutral, PublicKeyToken=5b4afc1ccaef40fb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PayPal.1.9.1\lib\net451\PayPal.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -128,9 +134,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.ApplicationInsights">
       <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
     </Reference>
@@ -162,14 +165,17 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\PaypalController.cs" />
     <Compile Include="Controllers\RegularClassesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\PaypalConfiguration.cs" />
     <Compile Include="Models\CarouselViewModel.cs" />
     <Compile Include="Models\BaseViewModel.cs" />
     <Compile Include="Models\GenericViewModel.cs" />
     <Compile Include="Models\GenericTabbedViewModel.cs" />
+    <Compile Include="Models\DonateViewModel.cs" />
     <Compile Include="Models\IndexViewModel.cs" />
     <Compile Include="Models\LatestNewsEventsViewModel.cs" />
     <Compile Include="Models\AdminSalaahTimesViewModel.cs" />
@@ -196,6 +202,7 @@
     <Content Include="Content\Images\Carousel\Carousel_TajweedClass.jpg" />
     <Content Include="Content\Images\Carousel\Carousel_TasteRamadaan.jpg" />
     <Content Include="Content\Images\Carousel\Carousel_VisitMyMosque2019.jpg" />
+    <Content Include="Content\Images\GiftAid.png" />
     <Content Include="Content\Images\IslamDewsburyLogo.jpg" />
     <Content Include="Content\Images\IslamDewsburyText.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\BirdsAndTheBees_Large.jpg" />
@@ -399,6 +406,9 @@
     <Content Include="Views\Home\Sisters.cshtml" />
     <Content Include="Views\Home\Madrassah.cshtml" />
     <Content Include="Views\Admin\SalaahTimes.cshtml" />
+    <Content Include="Views\Home\Donate.cshtml" />
+    <Content Include="Views\Paypal\Succeeded.cshtml" />
+    <Content Include="Views\Paypal\Failed.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

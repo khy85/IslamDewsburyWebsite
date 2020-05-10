@@ -119,6 +119,27 @@ namespace IslamDewsburyWebsite.Controllers
             return View(viewModel);
         }
 
+        public ActionResult Donate()
+        {
+            DonateViewModel viewModel = new DonateViewModel(TodaySalaahTime, DateTime.Now, PaymentType.OneOff);
+
+            return View(viewModel);
+        }
+
+        public ActionResult DonateDD()
+        {
+            DonateViewModel viewModel = new DonateViewModel(TodaySalaahTime, DateTime.Now, PaymentType.Monthly);
+
+            return View(viewModel);
+        }
+
+        public ActionResult DonateLastTenNights()
+        {
+            DonateViewModel viewModel = new DonateViewModel(TodaySalaahTime, DateTime.Now, PaymentType.Monthly);
+
+            return View(viewModel);
+        }
+
         public ActionResult ContactUs()
         {
             ContactMessageViewModel viewModel = new ContactMessageViewModel();

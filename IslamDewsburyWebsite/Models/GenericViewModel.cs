@@ -9,7 +9,5 @@ namespace IslamDewsburyWebsite.Models
         {
             base.SetProperties(salaahTimes, now, showRightBar, activeTab);
         }
-
-        public string test { get; set; }
     }
 }

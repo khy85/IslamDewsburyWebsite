@@ -44,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DonationRepository.cs" />
+    <Compile Include="IDonationRepository.cs" />
     <Compile Include="IslamicMonthNamesRepository.cs" />
     <Compile Include="IIslamicMonthNamesRepository.cs" />
     <Compile Include="NewsAndEventRepository.cs" />
@@ -65,77 +67,81 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database\April2020SalaahTimes.sql">
+    <Content Include="Database\CreateDonationDetails.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\April2019SalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\April2020SalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\August2019SalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\April2019SalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\December2018SalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\August2019SalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\December2019SalaahTimes.sql" />
-    <Content Include="Database\February2020SalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\December2018SalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\February2019SalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\December2019SalaahTimes.sql" />
+    <Content Include="Database\SalaahMonthlyTimes\February2020SalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\January2020SalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\February2019SalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\January2019SalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\January2020SalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\July2019SalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\January2019SalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\June2019SalaahTimes.sql" />
-    <Content Include="Database\March2020SalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\July2019SalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\March2019SalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\June2019SalaahTimes.sql" />
+    <Content Include="Database\SalaahMonthlyTimes\March2020SalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\Ramadan2020SalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\March2019SalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\May2019SalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\Ramadan2020SalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\November2019SalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\May2019SalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\November2018SalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\November2019SalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\October2019SalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\November2018SalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\September2019SalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\October2019SalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\SeptemberSalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\September2019SalaahTimes.sql">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Database\SalaahMonthlyTimes\SeptemberSalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
@@ -143,19 +149,19 @@
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\AugustSalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\AugustSalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\JulySalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\JulySalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\RamadaanSalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\RamadaanSalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\MaySalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\MaySalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
@@ -167,35 +173,39 @@
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\AprilSalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\AprilSalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\MarchSalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\MarchSalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\FebruarySalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\FebruarySalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\JanuarySalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\JanuarySalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\DecemberSalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\DecemberSalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\NovemberSalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\NovemberSalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Database\OctoberSalaahTimes.sql">
+    <Content Include="Database\SalaahMonthlyTimes\OctoberSalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Database\CreateSalaahTimes.sql">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Database\StoredProcedures\AddDonation.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>

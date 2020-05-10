@@ -1,0 +1,160 @@
+﻿@model IslamDewsburyWebsite.Models.DonateViewModel
+
+@{
+    ViewBag.Title = "Donate";
+}
+
+<h1>Supporting your Masjid</h1>
+
+<form>
+    <div class="box">
+        <h3>
+            <i>
+                @switch (Model.Donation.PaymentType)
+                {
+                    case IslamDewsburyWebsite.Models.PaymentType.OneOff:
+                        <text>One-off donation</text>
+                        break;
+                    case IslamDewsburyWebsite.Models.PaymentType.Monthly:
+                        <text>Monthly Direct Debit setup</text>
+                        break;
+                    case IslamDewsburyWebsite.Models.PaymentType.LastTenNights:
+                        <text>Last 10 nights of Ramadaan</text>
+                        break;
+                }
+            </i>
+        </h3>
+        <hr />
+        <p>Please contribute generously. The Prophet Muhammad ﷺ said: “Allah said: ‘Spend, O son of Adam, and I shall spend on you.’”</p>
+        <br />
+        <div>
+            <label class="labelSetting">Donation Amount (£)<span class="required">*</span></label>
+            <span onfocusout="CalculateProcessingAndTotalAmounts();">
+                @Html.TextBoxFor(x => x.Donation.InitialAmount, new { @class = "textBoxSetting", style = "width:100px;" })
+            </span>
+            <span style="float:right">
+                <select id="setDonationAmounts" name="setDonationAmounts" class="textBoxSetting"
+                        onchange="UpdateAmount(this.options[this.selectedIndex].value)">
+                    <option value="custom" selected="selected">Select a custom amount</option>
+                    <option value="5.00">Donate £5</option>
+                    <option value="10.00">Donate £10</option>
+                    <option value="20.00">Donate £20</option>
+                    <option value="50.00">Donate £50</option>
+                    <option value="100.00">Donate £100</option>
+                </select>
+            </span>
+        </div>
+
+        <hr />
+        <h4 class="marginBottom">Personal Info</h4>
+        <div class="marginBottom">
+            <label class="labelSetting">Title<span class="required">*</span></label>
+            @Html.DropDownListFor(m => m.Donator.Title,
+                        new SelectList(Enum.GetValues(typeof(IslamDewsburyWebsite.Models.Title))),
+                        "Select Title",
+                        new { @class = "textBoxSetting" })
+        </div>
+        <div class="marginBottom">
+            <label class="labelSetting">Name<span class="required">*</span></label>
+            @Html.TextBoxFor(x => x.Donator.FirstName, new { placeholder = "First Name", style = "margin-right:20px", @class = "textBoxSetting" })
+            @Html.TextBoxFor(x => x.Donator.LastName, new { placeholder = "Last Name", @class = "textBoxSetting" })
+        </div>
+        <div class="marginBottom">
+            <label class="labelSetting">Company Name</label>
+            @Html.TextBoxFor(x => x.Donator.CompanyName, new { placeholder = "Company Name", @class = "textBoxSetting" })
+        </div>
+        <div class="marginBottom">
+            <label class="labelSetting">Email Address<span class="required">*</span></label>
+            @Html.TextBoxFor(x => x.Donator.EmailAddress, new { placeholder = "Email Address", @class = "textBoxSetting" })
+        </div>
+        <div class="marginBottom">
+            <label class="labelSetting">Contact Number<span class="required">*</span></label>
+            @Html.TextBoxFor(x => x.Donator.ContactNo, new { placeholder = "Contact Number", @class = "textBoxSetting" })
+        </div>
+        <hr />
+
+        <h4 class="marginBottom">Billing details</h4>
+        <div class="marginBottom">
+            <label class="labelSetting">Address Line<span class="required">*</span></label>
+            @Html.TextBoxFor(x => x.Donator.AddressLine1, new { placeholder = "Address Line 1", style = "margin-right:20px", @class = "textBoxSetting" })
+            @Html.TextBoxFor(x => x.Donator.AddressLine2, new { placeholder = "Address Line 2", @class = "textBoxSetting" })
+        </div>
+        <div class="marginBottom">
+            <label class="labelSetting">City</label>
+            @Html.TextBoxFor(x => x.Donator.City, new { placeholder = "City", @class = "textBoxSetting" })
+        </div>
+        <div class="marginBottom">
+            <label class="labelSetting">Country<span class="required">*</span></label>
+            @Html.TextBoxFor(x => x.Donator.Country, new { placeholder = "Country", style = "margin-right:20px", @class = "textBoxSetting" })
+            @Html.TextBoxFor(x => x.Donator.PostCode, new { placeholder = "Zip/Postal code", @class = "textBoxSetting" })
+        </div>
+
+        <hr />
+        <h4 class="marginBottom">Reclaim Gift Aid</h4>
+        <div>
+            Would you like to <i>add</i> 25% to your donation without any cost to you? A Gift Aid declaration will allow Islam Dewsbury to claim tax back on
+            any donations that are eligible for it. That means, for every £1 you donate, we can increase that donation to £1.25.
+        </div>
+        <br />
+        <div class="row">
+            <div class="col col-lg-8">
+                @Html.CheckBoxFor(x => x.Donation.ClaimGiftAid) Yes - I am a UK taxpayer and would like to Gift Aid my donations now and in future.
+                I understand I must pay enough income tax and/or capital gains tax each tax year to cover the amount of Gift Aid that all charities and
+                community amateur sports clubs claim on my donations in that tax year, and I am responsible for paying any difference.
+                <br />
+                Please remember to let us know if your tax status, name or address change or if you wish to cancel your Gift Aid declaration.
+            </div>
+            <div class="col col-lg-4">
+                <img src="~/Content/Images/GiftAid.png" width="200" height="200" />
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col col-lg-12">
+                <h4 class="marginBottom">Processing Fees</h4>
+                @Html.CheckBoxFor(x => x.Donation.CoveringProcessingFee, new { @onchange = "CalculateProcessingAndTotalAmounts();" }) Yes - I would like to cover the
+                <b>£</b><label>@Html.TextBoxFor(item => item.Donation.ProcessingFee, new { style = "border: 0px none" })</label>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col col-lg-offset-4 col-lg-5">
+                <span class="marginBottom" style="margin-right:5px; font-size:20px;"><b>Total Donation (£)</b></span>
+                @Html.TextBoxFor(x => x.Donation.FinalAmount, new { @readonly = "readonly", @class = "textBoxSetting", style = "width:150px;" })
+            </div>
+            <div class="col col-lg-offset-1 col-lg-2">
+                @Html.LabelFor(x => x.Donation.PaymentType, new { style = "display:none" })
+                <button type="submit" class="btn btn-default" style="background-color: lightyellow; font-size:30px; height:50px;">Donate</button>
+            </div>
+        </div>
+</form>
+
+<script type="text/javascript">
+
+    function UpdateAmount(dropdownObjValue) {
+        document.getElementById("Donation_InitialAmount").value = dropdownObjValue;
+        CalculateProcessingAndTotalAmounts();
+    };
+
+    function CalculateProcessingAndTotalAmounts() {
+        var initialFee = document.getElementById("Donation_InitialAmount").value;
+
+        var regexCurrency = /^[1-9]\d*(((,\d{3}){1})?(\.\d{0,2})?)$/;
+        if (!regexCurrency.test(initialFee)) {
+            alert("Please enter a valid currency");
+            return;
+        }
+
+        var processingFee = (initialFee * 0.014) + 0.20;
+        var processingFeeCurrency = Math.round(processingFee * 100) / 100;
+        document.getElementById("Donation_ProcessingFee").value = processingFeeCurrency.toFixed(2);
+
+        var processingFeeCovered = document.getElementById("Donation_CoveringProcessingFee").checked;
+
+        document.getElementById("Donation_FinalAmount").value
+            = (((initialFee * 100) + (processingFeeCovered ? processingFeeCurrency * 100 : 0)) / 100).toFixed(2);
+    }
+
+    CalculateProcessingAndTotalAmounts();
+
+</script>
