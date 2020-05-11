@@ -8,5 +8,7 @@ namespace DataLayer
         int SaveDonation(Donation donationDetails);
 
         void UpdateDonationStatus(string paypalId, string status);
+
+        DonationResult GetDonationDetails(string paypalId);
     }
 }

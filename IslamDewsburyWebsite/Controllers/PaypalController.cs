@@ -12,69 +12,86 @@ namespace IslamDewsburyWebsite.Controllers
     {
         private Payment payment;
 
-        [HttpPost]
-        public ActionResult PaymentWithPaypal(DonateViewModel donateViewModel, string Cancel = null)
+        public ActionResult ReturnPaymentWithPayPal(string Cancel = null)
         {
+            APIContext apiContext = PaypalConfiguration.GetAPIContext();
+
+            try
+            {
+                string payerId = Request.Params["PayerID"];
+
+                if (string.IsNullOrEmpty(payerId))
+                    return Redirect(false);
+
+                // This function executes after receving all parameters for the payment  
+                var guid = Request.Params["guid"];
+                var executedPayment = ExecutePayment(apiContext, payerId, Session[guid] as string);
+
+                //If executed payment failed then we will show payment failure message to user  
+                if (executedPayment.state.ToLower() != "approved")
+                {
+                    UpdateDonationStatus("Failed - Paypal");
+
+                    return Redirect(false);
+                }
+            }
+            catch (Exception ex)
+            {
+                UpdateDonationStatus("Failed - Error");
+                return Redirect(false);
+            }
+
+            UpdateDonationStatus("Set-up");
+            return Redirect(true);
+        }
+
+        [HttpPost]
+        public ActionResult PaymentWithPaypal(DonateViewModel donateViewModel)
+        {
+            if (!ModelState.IsValid)
+                return View("~/Views/Home/Donate.cshtml", donateViewModel);
+
             APIContext apiContext = PaypalConfiguration.GetAPIContext();
 
             donateViewModel.SetProperties(TodaySalaahTime, DateTime.Now);
 
             try
             {
-                //A resource representing a Payer that funds a payment Payment Method as paypal
-                //Payer Id will be returned when payment proceeds or click to pay  
                 string payerId = Request.Params["PayerID"];
 
-                if (string.IsNullOrEmpty(payerId))
+                string baseURI = Request.Url.Scheme + "://" + Request.Url.Authority + "/Paypal/ReturnPaymentWithPayPal?";
+
+                var guid = Convert.ToString((new Random()).Next(100000));
+
+                int invoiceNo = this.SaveDonatorDetails(donateViewModel, guid);
+
+                var createdPayment = this.CreatePayment(apiContext, baseURI + "guid=" + guid, donateViewModel.Donation, invoiceNo);
+
+                var links = createdPayment.links.GetEnumerator();
+                string paypalRedirectUrl = null;
+
+                while (links.MoveNext())
                 {
-                    string baseURI = Request.Url.Scheme + "://" + Request.Url.Authority + "/Paypal/PaymentWithPayPal?";
-
-                    var guid = Convert.ToString((new Random()).Next(100000));
-
-                    int invoiceNo = this.SaveDonatorDetails(donateViewModel, guid);
-
-                    var createdPayment = this.CreatePayment(apiContext, baseURI + "guid=" + guid, donateViewModel.Donation, invoiceNo);
-
-                    var links = createdPayment.links.GetEnumerator();
-                    string paypalRedirectUrl = null;
-
-                    while (links.MoveNext())
+                    Links lnk = links.Current;
+                    if (lnk.rel.ToLower().Trim().Equals("approval_url"))
                     {
-                        Links lnk = links.Current;
-                        if (lnk.rel.ToLower().Trim().Equals("approval_url"))
-                        {
-                            //saving the payapalredirect URL to which user will be redirected for payment  
-                            paypalRedirectUrl = lnk.href;
-                        }
-                    }
-
-                    Session.Add(guid, createdPayment.id);
-                    return Redirect(paypalRedirectUrl);
-                }
-                else
-                {
-                    // This function executes after receving all parameters for the payment  
-                    var guid = Request.Params["guid"];
-                    var executedPayment = ExecutePayment(apiContext, payerId, Session[guid] as string);
-
-                    //If executed payment failed then we will show payment failure message to user  
-                    if (executedPayment.state.ToLower() != "approved")
-                    {
-                        UpdateDonationStatus("Failed - Paypal");
-                        return Redirect("Failed", ActiveTab.DonationFailed);
+                        //saving the payapalredirect URL to which user will be redirected for payment  
+                        paypalRedirectUrl = lnk.href;
                     }
                 }
+
+                Session.Add(guid, createdPayment.id);
+                return Redirect(paypalRedirectUrl);
             }
             catch (Exception ex)
             {
                 UpdateDonationStatus("Failed - Error");
-                return Redirect("Failed", ActiveTab.DonationFailed);
+                return Redirect(false);
             }
-
-            UpdateDonationStatus("Set-up");
-            return Redirect("Succeeded", ActiveTab.DonationSucceeded);
         }
 
+
+        #region Private methods
         private int SaveDonatorDetails(DonateViewModel donate, string paypalDonationId)
         {
             Donation donation = new Donation
@@ -190,11 +207,25 @@ namespace IslamDewsburyWebsite.Controllers
             return this.payment.Execute(apiContext, paymentExecution);
         }
 
-        private ActionResult Redirect(string viewUrl, ActiveTab tab)
+        private ActionResult Redirect(bool paymentSuccessful)
         {
-            GenericViewModel viewModel = new GenericViewModel(TodaySalaahTime, DateTime.Now, true, tab);
+            var guid = Request.Params["guid"];
+            double paymentMade = 0.00;
+            PaymentType paymentType = PaymentType.OneOff;
 
-            return View(viewUrl, viewModel);
+            if (string.IsNullOrEmpty(guid))
+            {
+                DonationResult result = DonationRepo.GetDonationDetails(guid);
+                paymentType = (PaymentType)result.PaymentType;
+                paymentMade = result.Amount;
+            }
+
+            DonateResultViewModel viewModel 
+                = new DonateResultViewModel(TodaySalaahTime, DateTime.Now, ActiveTab.DonationStatus, paymentType, paymentMade, paymentSuccessful);
+
+            return View("PaymentResult", viewModel);
         }
+
+        #endregion
     }
 }

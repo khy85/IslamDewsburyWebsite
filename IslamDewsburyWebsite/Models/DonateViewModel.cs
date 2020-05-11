@@ -25,7 +25,7 @@ namespace IslamDewsburyWebsite.Models
 
         public void SetProperties(SalaahTime salaahTimes, DateTime now)
         {
-            base.SetProperties(salaahTimes, now, false, ActiveTab.Home);
+            base.SetProperties(salaahTimes, now, false, ActiveTab.Donate);
         }
     }
 
@@ -39,45 +39,47 @@ namespace IslamDewsburyWebsite.Models
             InitialAmount = 5.00;
         }
 
-        [Required]
+        [Required(ErrorMessage = "Required")]
         public double? InitialAmount { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Required")]
         public double? FinalAmount { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Required")]
         public double ProcessingFee { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Required")]
         public bool CoveringProcessingFee { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Required")]
         public PaymentType PaymentType { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Required")]
         public bool ClaimGiftAid { get; set; }
     }
 
     public class DonatorDetailsViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Required")]
         public Title Title { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Required")]
         public string FirstName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Required")]
         public string LastName { get; set; }
 
         public string CompanyName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Required")]
+        [EmailAddress]
         public string EmailAddress { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Required")]
+        [Phone]
         public string ContactNo { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Required")]
         public string AddressLine1 { get; set; }
 
         public string AddressLine2 { get; set; }
@@ -86,24 +88,24 @@ namespace IslamDewsburyWebsite.Models
 
         public string Country { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Required")]
         public string PostCode { get; set; }
     }
 
     public enum Title
     {
-        Mr,
-        Mrs,
-        Ms, 
-        Miss,
-        Dr,
-        Prof
+        Mr = 1,
+        Mrs = 2,
+        Ms = 3,
+        Miss = 4,
+        Dr = 5,
+        Prof = 6
     }
 
     public enum PaymentType
     {
-        OneOff,
-        Monthly,
-        LastTenNights
+        OneOff = 1,
+        Monthly = 2,
+        LastTenNights = 3
     }
 }

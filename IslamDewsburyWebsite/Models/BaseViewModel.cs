@@ -110,8 +110,6 @@ namespace IslamDewsburyWebsite.Models
         ContactUs = 7,
         Services = 8,
         Donate = 9,
-        DonateDD = 10,
-        DonationSucceeded = 11,
-        DonationFailed = 12
+        DonationStatus = 10
     }
 }

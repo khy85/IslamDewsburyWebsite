@@ -18,6 +18,7 @@ namespace DataLayer
             var values = new
             {
                 Amount = donationDetails.Amount,
+                PaypalDonationId = donationDetails.PaypalDonationId,
                 ProcessingFeeCovered = donationDetails.CoveringProcessingFee,
                 PaymentType = donationDetails.PaymentType,
                 ClaimGiftAid = donationDetails.ClaimGiftAid,
@@ -45,6 +46,11 @@ namespace DataLayer
             this.dbConnection.Execute(@" UPDATE [dbo].[Donation] SET DonationStatus = @Status WHERE PaypalDonationId = @PaypalDonationId;",
                             new { PaypalDonationId = paypalId, Status = status });
         }
-        
+
+        public DonationResult GetDonationDetails(string paypalId)
+        {
+            var sql = "SELECT Amount, PaymentType FROM Donation WHERE Id = " + paypalId;
+            return this.dbConnection.Query<DonationResult>(sql).SingleOrDefault();
+        }
     }
 }

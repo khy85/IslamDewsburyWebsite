@@ -28,9 +28,10 @@ AS
 
 BEGIN
 
-	INSERT INTO [dbo].[Donation]
-	VALUES (@PaypalDonationId, @Amount, @ProcessingFeeCovered, @PaymentType, @ClaimGiftAid, @Title, @FirstName, @LastName, @CompanyName, @EmailAddress, @ContactNo,
-			@AddressLine1, @AddressLine2, @City, @Country, @Postcode, @DonationStatus);
+	INSERT INTO [dbo].[Donation] (PaypalDonationId, Amount, ProcessingFeeCovered, ClaimGiftAid, PaymentType, Title, FirstName, LastName, CompanyName,
+									EmailAddress, ContactNo, AddressLine1, AddressLine2, City, Country, PostCode, DonationStatus)
+	VALUES (@PaypalDonationId, @Amount, @ProcessingFeeCovered, @ClaimGiftAid, @PaymentType, @Title, @FirstName, @LastName, @CompanyName,
+			@EmailAddress, @ContactNo, @AddressLine1, @AddressLine2, @City, @Country, @Postcode, @DonationStatus);
 
 	SELECT @@IDENTITY;
 

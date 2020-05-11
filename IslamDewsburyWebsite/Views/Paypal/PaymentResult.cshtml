@@ -1,0 +1,42 @@
+﻿@model IslamDewsburyWebsite.Models.DonateResultViewModel
+
+@{
+    bool result = Model.PaymentSuccessful;
+    string donationResultStatus = Model.PaymentSuccessful ? "Donation succeeded" : "Donation failed";
+
+    ViewBag.Title = donationResultStatus;
+}
+
+<h1>
+    @donationResultStatus
+</h1>
+
+<div class="box">
+
+    <div class="row">
+        <div class="col col-sm-offset-4">
+            @if (Model.PaymentSuccessful)
+            {
+                <span>
+                    <img src="~/Content/Images/GreenTick.jpg" width="200" height="150" />
+                </span>
+                <span>
+                    <h2>
+                        @donationResultStatus
+                    </h2>
+                </span>
+            }
+            else
+            {
+                <span>
+                    <img src="~/Content/Images/RedCross.jpg" width="200" height="150" />
+                </span>
+                <span>
+                    <h2>
+                        @donationResultStatus
+                    </h2>
+                </span>
+            }
+        </div>
+    </div>
+</div>
