@@ -212,16 +212,18 @@ namespace IslamDewsburyWebsite.Controllers
             var guid = Request.Params["guid"];
             double paymentMade = 0.00;
             PaymentType paymentType = PaymentType.OneOff;
+            string donor = string.Empty;
 
-            if (string.IsNullOrEmpty(guid))
+            if (!string.IsNullOrEmpty(guid))
             {
                 DonationResult result = DonationRepo.GetDonationDetails(guid);
                 paymentType = (PaymentType)result.PaymentType;
                 paymentMade = result.Amount;
+                donor = result.FirstName;
             }
 
             DonateResultViewModel viewModel 
-                = new DonateResultViewModel(TodaySalaahTime, DateTime.Now, ActiveTab.DonationStatus, paymentType, paymentMade, paymentSuccessful);
+                = new DonateResultViewModel(TodaySalaahTime, DateTime.Now, ActiveTab.DonationStatus, paymentType, paymentMade, paymentSuccessful, donor);
 
             return View("PaymentResult", viewModel);
         }

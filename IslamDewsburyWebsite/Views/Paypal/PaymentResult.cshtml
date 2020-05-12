@@ -2,7 +2,22 @@
 
 @{
     bool result = Model.PaymentSuccessful;
-    string donationResultStatus = Model.PaymentSuccessful ? "Donation succeeded" : "Donation failed";
+    string donationResultStatus = Model.PaymentSuccessful ? "Donation Succeeded" : "Donation Failed";
+
+    string paymentTypeSpecificMsg = string.Empty;
+    switch (Model.PaymentType)
+    {
+        case IslamDewsburyWebsite.Models.PaymentType.OneOff:
+            paymentTypeSpecificMsg = "as a one-off payment.";
+            break;
+        case IslamDewsburyWebsite.Models.PaymentType.Monthly:
+            paymentTypeSpecificMsg = "on a monthly Direct Debit.";
+            break;
+        case IslamDewsburyWebsite.Models.PaymentType.LastTenNights:
+            paymentTypeSpecificMsg = "to be taken out every night over the last 10 nights of Ramadaan. In sha Allah you will be guaranteed this ajr for Laylatul Qadr.";
+            break;
+
+    }
 
     ViewBag.Title = donationResultStatus;
 }
@@ -11,32 +26,33 @@
     @donationResultStatus
 </h1>
 
-<div class="box">
+<hr />
 
-    <div class="row">
-        <div class="col col-sm-offset-4">
-            @if (Model.PaymentSuccessful)
-            {
-                <span>
-                    <img src="~/Content/Images/GreenTick.jpg" width="200" height="150" />
-                </span>
-                <span>
-                    <h2>
-                        @donationResultStatus
-                    </h2>
-                </span>
-            }
-            else
-            {
-                <span>
-                    <img src="~/Content/Images/RedCross.jpg" width="200" height="150" />
-                </span>
-                <span>
-                    <h2>
-                        @donationResultStatus
-                    </h2>
-                </span>
-            }
-        </div>
-    </div>
+<div class="box" style="font-size:18px;">
+    @if (Model.PaymentSuccessful)
+    {
+        <img src="~/Content/Images/GreenTick.jpg" width="70" height="70" style="float:left; margin-right:20px;" />
+
+        <p>
+            Jazakumullahu khayr @Model.DonorName !
+        </p>
+        <p style="margin-top:15px;">
+            Your donation of @Model.Payment has been processed @paymentTypeSpecificMsg
+        </p>
+        <p style="margin-top:15px;">
+            May Allah accept it from you and make it heavy on your scale of deeds. Aameen
+        </p>
+    }
+    else
+    {
+        <img src="~/Content/Images/RedCross.jpg" width="70" height="70" style="float:left; margin-right:20px;" />
+
+        <p>
+            Unfortunately an error occurred whilst trying to process this payment.
+            <b>Please try again.</b>
+        </p>
+        <p style="margin-top:15px;">
+            <i>Jazakumullahu khayr</i>
+        </p>
+    }
 </div>

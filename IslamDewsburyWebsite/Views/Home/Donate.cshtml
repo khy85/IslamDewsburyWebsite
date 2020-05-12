@@ -4,7 +4,6 @@
     ViewBag.Title = "Donate";
 }
 
-<h1>Supporting your Masjid</h1>
 @using (Html.BeginForm("PaymentWithPaypal", "Paypal", FormMethod.Post))
 {
     <div class="box">
@@ -19,13 +18,54 @@
                         <text>Monthly Direct Debit setup</text>
                         break;
                     case IslamDewsburyWebsite.Models.PaymentType.LastTenNights:
-                        <text>Last 10 nights of Ramadaan</text>
+                        <text>Laylatul Qadr - <b>The Night of Power</b></text>
                         break;
                 }
             </i>
         </h3>
         <hr />
-        <p>Please contribute generously. The Prophet Muhammad ﷺ said: “Allah said: ‘Spend, O son of Adam, and I shall spend on you.’”</p>
+        <p>
+            Assalamualaikum
+        </p>
+        @switch (Model.Donation.PaymentType)
+        {
+            case IslamDewsburyWebsite.Models.PaymentType.OneOff:
+                <p>
+                    Your Masjid needs you now more than ever in these current circumstances! As you already know, we are currently losing on average £500 a week
+                    through Jummah collections, general donations and Masjid boxes. We have approximately £3,500 a month of running costs for the masjid.
+                </p>
+                <p>
+                    Please contribute generously. The Prophet Muhammad ﷺ said: “Allah said: ‘Spend, O son of Adam, and I shall spend on you.”
+                </p>
+                break;
+            case IslamDewsburyWebsite.Models.PaymentType.Monthly:
+                <p>
+                    Your Masjid needs you now more than ever in these current circumstances! As you already know, we are currently losing on average £500 a week
+                    through Jummah collections, general donations and Masjid boxes. We have approximately £3,500 a month of running costs for the masjid.
+                </p>
+                <p>
+                    We <b>urgently</b> need brothers and sisters to setup a monthly Direct Debit to help the Masjid. Something as little as 67p a day will
+                    add up to £20 a month.
+                </p>
+                <p>
+                    <b>The Masjid may be closed but let’s ensure our hearts don’t do the same.</b>
+                </p>
+                break;
+            case IslamDewsburyWebsite.Models.PaymentType.LastTenNights:
+                <p>
+                    The odd nights in the last 10 days of Ramadhan are upon us in sha Allah. Allah SWT tells us in Surah Qadr than The Night of Power
+                    is better than <i>one thousand months</i> (97:3)
+                </p>
+                <p>
+                    Islam Dewsbury has setup an amazing opportunity for you to automate your donations to the masjid on every day of the last 10 nights so you will
+                    not miss the reward of donating on the night of Laylatul Qadr.
+                </p>
+                <p>
+                    Simply set the amount you would like to donate for each of the last 10 nights.
+                </p>
+                break;
+        }
+
         <br />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
@@ -48,6 +88,19 @@
                     <option value="50.00">Donate £50</option>
                     <option value="100.00">Donate £100</option>
                 </select>
+
+                @switch (Model.Donation.PaymentType)
+                {
+                    case IslamDewsburyWebsite.Models.PaymentType.OneOff:
+                        <text> one-off </text>
+                        break;
+                    case IslamDewsburyWebsite.Models.PaymentType.Monthly:
+                        <text> monthly </text>
+                        break;
+                    case IslamDewsburyWebsite.Models.PaymentType.LastTenNights:
+                        <text> every day </text>
+                        break;
+                }
             </div>
         </div>
 
@@ -193,10 +246,25 @@
             <div class="col col-sm-offset-4 col-sm-5">
                 <span class="marginBottom" style="margin-right:5px; font-size:20px;"><b>Total Donation (£)</b></span>
                 @Html.TextBoxFor(x => x.Donation.FinalAmount, new { @readonly = "readonly", @class = "textBoxSetting", style = "width:150px;" })
+
+                <div>
+                    @switch (Model.Donation.PaymentType)
+                    {
+                        case IslamDewsburyWebsite.Models.PaymentType.OneOff:
+                            <text> (one-off) </text>
+                            break;
+                        case IslamDewsburyWebsite.Models.PaymentType.Monthly:
+                            <text> (monthly) </text>
+                            break;
+                        case IslamDewsburyWebsite.Models.PaymentType.LastTenNights:
+                            <text> (every day) </text>
+                            break;
+                    }
+                </div>
             </div>
             <div class="col col-sm-offset-1 col-sm-2">
                 @Html.HiddenFor(x => x.Donation.PaymentType)
-                <button type="submit" class="btn btn-default" style="background-color: lightyellow; font-size:30px; height:50px;">Donate</button>
+                <button type="submit" class="btn btn-default" style="background-color: peru; font-size:30px; height:50px;">Donate</button>
             </div>
         </div>
     </div>

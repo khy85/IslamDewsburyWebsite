@@ -130,14 +130,14 @@ namespace IslamDewsburyWebsite.Controllers
         {
             DonateViewModel viewModel = new DonateViewModel(TodaySalaahTime, DateTime.Now, PaymentType.Monthly);
 
-            return View(viewModel);
+            return View("Donate",viewModel);
         }
 
         public ActionResult DonateLastTenNights()
         {
-            DonateViewModel viewModel = new DonateViewModel(TodaySalaahTime, DateTime.Now, PaymentType.Monthly);
+            DonateViewModel viewModel = new DonateViewModel(TodaySalaahTime, DateTime.Now, PaymentType.LastTenNights);
 
-            return View(viewModel);
+            return View("Donate",viewModel);
         }
 
         public ActionResult ContactUs()

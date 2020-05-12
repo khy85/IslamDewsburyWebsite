@@ -49,7 +49,7 @@ namespace DataLayer
 
         public DonationResult GetDonationDetails(string paypalId)
         {
-            var sql = "SELECT Amount, PaymentType FROM Donation WHERE Id = " + paypalId;
+            var sql = "SELECT Amount, PaymentType, FirstName FROM Donation WHERE Id = " + paypalId;
             return this.dbConnection.Query<DonationResult>(sql).SingleOrDefault();
         }
     }
