@@ -152,7 +152,7 @@ namespace IslamDewsburyWebsite.Controllers
             return new Plan
             {
                 name = $"Monthly DD - {donateViewModel.Donator.FirstName} {donateViewModel.Donator.LastName} - £{donateViewModel.Donation.FinalAmount}",
-                description = "Direct debit with Islam Dewsbury",
+                description = "Monthly donation to Islam Dewsbury - £" + donateViewModel.Donation.FinalAmount.ToString(),
                 type = "infinite",
                 payment_definitions = new List<PaymentDefinition>
                 {
@@ -165,7 +165,7 @@ namespace IslamDewsburyWebsite.Controllers
                         amount = new Currency
                         {
                             currency = "GBP",
-                            value = donateViewModel.Donation.InitialAmount.ToString()
+                            value = donateViewModel.Donation.FinalAmount.ToString()
                         },
                         cycles = "0"
                     }
@@ -176,7 +176,7 @@ namespace IslamDewsburyWebsite.Controllers
                     setup_fee = new Currency
                     {
                         currency = "GBP",
-                        value = donateViewModel.Donation.InitialAmount.ToString()
+                        value = donateViewModel.Donation.FinalAmount.ToString()
                     },
                     return_url = Url.Action("ReturnDdPaypalPayment", "Paypal", null, Request.Url.Scheme),
                     cancel_url = Url.Action("CancelDdPaypalPayment", "Paypal", null, Request.Url.Scheme)
@@ -285,7 +285,7 @@ namespace IslamDewsburyWebsite.Controllers
 
             transactionList.Add(new Transaction()
             {
-                description = "Donation to Islam Dewsbury",
+                description = "Donation to Islam Dewsbury - £" + donationViewModel.FinalAmount.ToString(),
                 //invoice_number = donationId.ToString("000000"),
                 amount = amount,
                 item_list = itemList
