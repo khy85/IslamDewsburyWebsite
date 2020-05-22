@@ -18,7 +18,6 @@ namespace DataLayer
             var values = new
             {
                 Amount = donationDetails.Amount,
-                PaypalDonationId = donationDetails.PaypalDonationId,
                 PaypalDirectDebitPlanId = donationDetails.PaypalDirectDebitPlanId,
                 ProcessingFeeCovered = donationDetails.CoveringProcessingFee,
                 PaymentType = donationDetails.PaymentType,
@@ -54,6 +53,12 @@ namespace DataLayer
                            new { Id = id, Status = status });
         }
 
+        public void UpdateOneOffDonationPaypalReference(int id, string paypalReference)
+        {
+            this.dbConnection.Execute(@" UPDATE [dbo].[Donation] SET PaypalDonationId = @PaypalDonationId WHERE Id = @Id;",
+                            new { Id = id, PaypalDonationId = paypalReference });
+        }
+
         public void UpdateAgreementToken(int id, string agreementToken)
         {
             this.dbConnection.Execute(@" UPDATE [dbo].[Donation] SET PaypalDirectDebitAgreementToken = @AgreementToken WHERE Id = @Id;",
@@ -68,13 +73,13 @@ namespace DataLayer
 
         public DonationResult GetDonationDetailsByPaypalId(string paypalId)
         {
-            var sql = "SELECT Amount, PaymentType, FirstName FROM Donation WHERE PaypalDonationId = " + paypalId;
+            var sql = "SELECT Id, Amount, PaymentType, FirstName FROM Donation WHERE PaypalDonationId = '" + paypalId + "'";
             return this.dbConnection.Query<DonationResult>(sql).SingleOrDefault();
         }
 
         public DonationResult GetDonationDetailsByToken(string token)
         {
-            var sql = "SELECT Amount, PaymentType, FirstName FROM Donation WHERE PaypalDirectDebitAgreementToken = '" + token + "'";
+            var sql = "SELECT Id, Amount, PaymentType, FirstName FROM Donation WHERE PaypalDirectDebitAgreementToken = '" + token + "'";
             return this.dbConnection.Query<DonationResult>(sql).SingleOrDefault();
         }
 

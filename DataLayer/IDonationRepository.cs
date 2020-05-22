@@ -11,6 +11,8 @@ namespace DataLayer
 
         void UpdateDonationStatus(int id, string status);
 
+        void UpdateOneOffDonationPaypalReference(int id, string paypalReference);
+
         void UpdateAgreementToken(int id, string agreementToken);
 
         void UpdateAgreementId(string token, string agreementId);

@@ -32,49 +32,33 @@ namespace IslamDewsburyWebsite.Controllers
             return View("~/Views/Home/Donate.cshtml", donateViewModel);
         }
 
-        public ActionResult ReturnOneOffPaypalPayment(string Cancel = null)
+        public ActionResult ReturnOneOffPaypalPayment(string payerId, string paymentId)
         {
             APIContext apiContext = PaypalConfiguration.GetAPIContext();
 
             try
             {
-                string payerId = Request.Params["PayerID"];
-
-                if (string.IsNullOrEmpty(payerId) || !string.IsNullOrEmpty(Cancel))
-                    return RedirectOneOffPayment(false);
-
-                // This function executes after receving all parameters for the payment  
-                var guid = Request.Params["guid"];
-                var executedPayment = ExecutePayment(apiContext, payerId, Session[guid] as string);
-
-                //If executed payment failed then we will show payment failure message to user  
-                if (executedPayment.state.ToLower() != "approved")
-                {
-                    UpdateDonationStatusByGuid("Failed - Paypal");
-
-                    return RedirectOneOffPayment(false);
-                }
+                var executedPayment = ExecutePayment(apiContext, payerId, paymentId);
             }
             catch (Exception ex)
             {
-                UpdateDonationStatusByGuid("Failed - Error");
-                return RedirectOneOffPayment(false);
+                DonationRepo.UpdateDonationStatus(paymentId, "Failed - Error");
+                return RedirectOneOffPayment(false, paymentId);
             }
 
-            UpdateDonationStatusByGuid("Set-up");
-            return RedirectOneOffPayment(true);
+            DonationRepo.UpdateDonationStatus(paymentId, "Set-up");
+
+            return RedirectOneOffPayment(true, paymentId);
+        }
+
+        public ActionResult CancelOneOffPaypalPayment(string payerId, string paymentId)
+        {
+            DonationRepo.UpdateDonationStatus(paymentId, "Cancelled");
+
+            return RedirectOneOffPayment(false, paymentId);
         }
 
         public ActionResult ReturnDdPaypalPayment(string token)
-        {
-            DonationResult result = DonationRepo.GetDonationDetailsByToken(token);
-
-            APIContext apiContext = PaypalConfiguration.GetAPIContext();
-
-            return RedirectOneOffPayment(false);
-        }
-
-        public ActionResult CancelDdPaypalPayment(string token)
         {
             DonationResult result = DonationRepo.GetDonationDetailsByToken(token);
 
@@ -84,16 +68,24 @@ namespace IslamDewsburyWebsite.Controllers
             var executedAgreement = agreement.Execute(apiContext);
             DonationRepo.UpdateAgreementId(token, executedAgreement.id);
 
-            UpdateDonationStatusByGuid("Set-up");
+            DonationRepo.UpdateDonationStatus(result.Id, "Set-up");
+
             return RedirectDirectDebit(true, result);
         }
 
+        public ActionResult CancelDdPaypalPayment(string token)
+        {
+            DonationResult result = DonationRepo.GetDonationDetailsByToken(token);
 
-        private int SaveDonatorDetails(DonateViewModel donate, string paypalDonationId, string paypalDirectDebitPlanId)
+            DonationRepo.UpdateDonationStatus(result.Id, "Cancelled");
+
+            return RedirectDirectDebit(false, result);
+        }
+
+        private int SaveDonatorDetails(DonateViewModel donate, string paypalDirectDebitPlanId)
         {
             Donation donation = new Donation
             {
-                PaypalDonationId = paypalDonationId,
                 PaypalDirectDebitPlanId = paypalDirectDebitPlanId,
                 Amount = donate.Donation.FinalAmount.Value,
                 CoveringProcessingFee = donate.Donation.CoveringProcessingFee,
@@ -122,7 +114,7 @@ namespace IslamDewsburyWebsite.Controllers
             // Create Plan
             Plan ddPlan = CreateDirectDebitPlan(donateViewModel, apiContext);
             ddPlan = Plan.Create(apiContext, ddPlan);
-            int invoiceNo = this.SaveDonatorDetails(donateViewModel, string.Empty, ddPlan.id);
+            int invoiceNo = this.SaveDonatorDetails(donateViewModel, ddPlan.id);
 
             // Activate the plan
             PatchRequest patch = ActivateDirectDebitPlan();
@@ -226,49 +218,27 @@ namespace IslamDewsburyWebsite.Controllers
 
         private ActionResult OneOffPayment(DonateViewModel donateViewModel, APIContext apiContext)
         {
+            string paypalId = string.Empty;
             try
             {
-                string payerId = Request.Params["PayerID"];
+                int invoiceNo = this.SaveDonatorDetails(donateViewModel, string.Empty);
 
-                string baseURI = Request.Url.Scheme + "://" + Request.Url.Authority + "/Paypal/ReturnOneOffPaypalPayment?";
+                var createdPayment = this.CreatePayment(apiContext, donateViewModel.Donation, invoiceNo);
+                paypalId = createdPayment.id;
+                DonationRepo.UpdateOneOffDonationPaypalReference(invoiceNo, createdPayment.id);
 
-                var guid = Convert.ToString((new Random()).Next(100000));
+                var approvalUrl = createdPayment.links.FirstOrDefault(x => x.rel.Equals("approval_url", StringComparison.OrdinalIgnoreCase));
 
-                int invoiceNo = this.SaveDonatorDetails(donateViewModel, guid, string.Empty);
-
-                var createdPayment = this.CreatePayment(apiContext, baseURI + "guid=" + guid, donateViewModel.Donation, invoiceNo);
-
-                var links = createdPayment.links.GetEnumerator();
-                string paypalRedirectUrl = null;
-
-                while (links.MoveNext())
-                {
-                    Links lnk = links.Current;
-                    if (lnk.rel.ToLower().Trim().Equals("approval_url"))
-                    {
-                        //saving the payapalredirect URL to which user will be redirected for payment  
-                        paypalRedirectUrl = lnk.href;
-                    }
-                }
-
-                Session.Add(guid, createdPayment.id);
-                return Redirect(paypalRedirectUrl);
+                return Redirect(approvalUrl.href);
             }
             catch (Exception ex)
             {
-                UpdateDonationStatusByGuid("Failed - Error");
-                return RedirectOneOffPayment(false);
+                DonationRepo.UpdateDonationStatus(paypalId, "Failed - Error");
+                return RedirectOneOffPayment(false, paypalId);
             }
         }
 
-        private void UpdateDonationStatusByGuid(string status)
-        {
-            var guid = Request.Params["guid"];
-            if (!string.IsNullOrEmpty(guid))
-                DonationRepo.UpdateDonationStatus(guid, status);
-        }
-
-        private Payment CreatePayment(APIContext apiContext, string redirectUrl, DonationViewModel donationViewModel, int donationId)
+        private Payment CreatePayment(APIContext apiContext, DonationViewModel donationViewModel, int donationId)
         {
             //create itemlist and add item objects to it  
             var itemList = new ItemList()
@@ -291,8 +261,8 @@ namespace IslamDewsburyWebsite.Controllers
             // Configure Redirect Urls here with RedirectUrls object  
             var redirUrls = new RedirectUrls()
             {
-                cancel_url = redirectUrl + "&Cancel=true",
-                return_url = redirectUrl
+                cancel_url = Url.Action("CancelOneOffPaypalPayment", "Paypal", null, Request.Url.Scheme),
+                return_url = Url.Action("ReturnOneOffPaypalPayment", "Paypal", null, Request.Url.Scheme),
             };
 
 
@@ -316,7 +286,7 @@ namespace IslamDewsburyWebsite.Controllers
             transactionList.Add(new Transaction()
             {
                 description = "Donation to Islam Dewsbury",
-                invoice_number = donationId.ToString("000000"),
+                //invoice_number = donationId.ToString("000000"),
                 amount = amount,
                 item_list = itemList
             });
@@ -329,7 +299,6 @@ namespace IslamDewsburyWebsite.Controllers
                 redirect_urls = redirUrls
             };
 
-            // Create a payment using a APIContext  
             return this.payment.Create(apiContext);
         }
 
@@ -348,22 +317,18 @@ namespace IslamDewsburyWebsite.Controllers
             return this.payment.Execute(apiContext, paymentExecution);
         }
 
-        private ActionResult RedirectOneOffPayment(bool paymentSuccessful)
+        private ActionResult RedirectOneOffPayment(bool paymentSuccessful, string paypalPaymentId)
         {
-            var guid = Request.Params["guid"];
             string paymentMade = string.Empty;
             PaymentType paymentType = PaymentType.OneOff;
             string donor = string.Empty;
 
-            if (!string.IsNullOrEmpty(guid))
+            DonationResult result = DonationRepo.GetDonationDetailsByPaypalId(paypalPaymentId);
+            if (result != null)
             {
-                DonationResult result = DonationRepo.GetDonationDetailsByPaypalId(guid);
-                if (result != null)
-                {
-                    paymentType = (PaymentType)result.PaymentType;
-                    paymentMade = result.Amount.ToString("#.##");
-                    donor = result.FirstName;
-                }
+                paymentType = (PaymentType)result.PaymentType;
+                paymentMade = result.Amount.ToString("#.##");
+                donor = result.FirstName;
             }
 
             DonateResultViewModel viewModel
