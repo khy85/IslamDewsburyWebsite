@@ -4,7 +4,10 @@
 Create TABLE Donation
 (
 	Id INT IDENTITY(1,1),
-	PaypalDonationId VARCHAR(100) NOT NULL,
+	PaypalDonationId VARCHAR(100) NULL,
+	PaypalDirectDebitPlanId VARCHAR(100) NULL,
+	PaypalDirectDebitAgreementToken VARCHAR(500) NULL,
+	PaypalDirectDebitAgreementId VARCHAR(100) NULL,
 	Amount FLOAT NOT NULL,
 	ProcessingFeeCovered BIT NOT NULL,
 	ClaimGiftAid BIT NOT NULL,

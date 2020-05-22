@@ -21,6 +21,7 @@ CREATE PROCEDURE AddDonation
 	@Country varchar(200),
 	@Postcode varchar(10),
 	@PaypalDonationId varchar(100),
+	@PaypalDirectDebitPlanId varchar(100),
 	@DonationStatus varchar(20)
 )
 
@@ -28,9 +29,9 @@ AS
 
 BEGIN
 
-	INSERT INTO [dbo].[Donation] (PaypalDonationId, Amount, ProcessingFeeCovered, ClaimGiftAid, PaymentType, Title, FirstName, LastName, CompanyName,
+	INSERT INTO [dbo].[Donation] (PaypalDonationId, PaypalDirectDebitPlanId, Amount, ProcessingFeeCovered, ClaimGiftAid, PaymentType, Title, FirstName, LastName, CompanyName,
 									EmailAddress, ContactNo, AddressLine1, AddressLine2, City, Country, PostCode, DonationStatus)
-	VALUES (@PaypalDonationId, @Amount, @ProcessingFeeCovered, @ClaimGiftAid, @PaymentType, @Title, @FirstName, @LastName, @CompanyName,
+	VALUES (@PaypalDonationId, @PaypalDirectDebitPlanId, @Amount, @ProcessingFeeCovered, @ClaimGiftAid, @PaymentType, @Title, @FirstName, @LastName, @CompanyName,
 			@EmailAddress, @ContactNo, @AddressLine1, @AddressLine2, @City, @Country, @Postcode, @DonationStatus);
 
 	SELECT @@IDENTITY;

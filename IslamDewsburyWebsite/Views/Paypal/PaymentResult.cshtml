@@ -37,7 +37,12 @@
             Jazakumullahu khayr @Model.DonorName !
         </p>
         <p style="margin-top:15px;">
-            Your donation of @Model.Payment has been processed @paymentTypeSpecificMsg
+            Your donation
+            @if (!string.IsNullOrEmpty(@Model.Payment))
+            {
+                <text>of £@Model.Payment</text>
+            }
+            has been processed @paymentTypeSpecificMsg
         </p>
         <p style="margin-top:15px;">
             May Allah accept it from you and make it heavy on your scale of deeds. Aameen

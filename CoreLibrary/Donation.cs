@@ -6,6 +6,8 @@ namespace CoreLibrary
     {
         public string PaypalDonationId { get; set; }
 
+        public string PaypalDirectDebitPlanId { get; set; }
+
         public double Amount { get; set; }
 
         public bool CoveringProcessingFee { get; set; }

@@ -6,7 +6,7 @@ namespace IslamDewsburyWebsite.Models
     public class DonateResultViewModel : BaseViewModel
     {
         public DonateResultViewModel(SalaahTime salaahTimes, DateTime now, ActiveTab tab, PaymentType paymentType, 
-            double paymentMade, bool paymentSuccessful, string donorName)
+            string paymentMade, bool paymentSuccessful, string donorName)
         {
             this.Payment = paymentMade;
             this.PaymentType = paymentType;
@@ -17,7 +17,7 @@ namespace IslamDewsburyWebsite.Models
 
         public PaymentType PaymentType { get; set; }
 
-        public double Payment { get; set; }
+        public string Payment { get; set; }
 
         public bool PaymentSuccessful { get; set; }
 

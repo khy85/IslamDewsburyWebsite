@@ -9,6 +9,14 @@ namespace DataLayer
 
         void UpdateDonationStatus(string paypalId, string status);
 
-        DonationResult GetDonationDetails(string paypalId);
+        void UpdateDonationStatus(int id, string status);
+
+        void UpdateAgreementToken(int id, string agreementToken);
+
+        void UpdateAgreementId(string token, string agreementId);
+
+        DonationResult GetDonationDetailsByPaypalId(string paypalId);
+
+        DonationResult GetDonationDetailsByToken(string token);
     }
 }
