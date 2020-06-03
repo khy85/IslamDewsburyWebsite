@@ -71,6 +71,10 @@
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Database\CreateDailySalaahTimes and JamaatTimes.sql">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Database\SalaahMonthlyTimes\April2020SalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
@@ -108,6 +112,7 @@
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Database\JamaatMonthlyTimes\June2020SalaahTimes.sql" />
     <Content Include="Database\SalaahMonthlyTimes\June2019SalaahTimes.sql" />
     <Content Include="Database\SalaahMonthlyTimes\March2020SalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
@@ -202,6 +207,10 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Database\CreateSalaahTimes.sql">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Database\StoredProcedures\RetrieveSalaahTimes.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>

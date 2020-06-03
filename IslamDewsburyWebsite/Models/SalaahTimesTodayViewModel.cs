@@ -1,9 +1,5 @@
 ﻿using CoreLibrary;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
 namespace IslamDewsburyWebsite.Models
 {
@@ -20,26 +16,26 @@ namespace IslamDewsburyWebsite.Models
             this.HijriDate = salaahTime.HijriDate;
             this.HijriMonth = salaahTime.HijriMonth;
             this.DisplayedDate = salaahTime.SalaahDate.ToString("ddd dd MMM yyyy");
-            this.FajrAdhan = GetTime(salaahTime.FajrAdhan);
-            this.FajrIqamah = GetTime(salaahTime.FajrIqamah);
-            this.Sunrise = GetTime(salaahTime.Sunrise);
-            this.ZuhrAdhan = GetTime(salaahTime.ZuhrAdhan);
-            this.AsrAdhan = GetTime(salaahTime.AsrAdhan);
-            this.AsrIqamah = GetTime(salaahTime.AsrIqamah);
-            this.MaghribAdhan = GetTime(salaahTime.MaghribAdhan);
-            this.MaghribIqamah = GetTime(salaahTime.MaghribIqamah);
-            this.IshaAdhan = GetTime(salaahTime.IshaAdhan);
-            this.IshaIqamah = GetTime(salaahTime.IshaIqamah);
+            this.FajrAdhan = salaahTime.FajrAdhan;
+            this.FajrIqamah = salaahTime.FajrIqamah;
+            this.Sunrise = salaahTime.Sunrise;
+            this.ZuhrAdhan = salaahTime.ZuhrAdhan;
+            this.AsrAdhan = salaahTime.AsrAdhan;
+            this.AsrIqamah = salaahTime.AsrIqamah;
+            this.MaghribAdhan = salaahTime.MaghribAdhan;
+            this.MaghribIqamah = salaahTime.MaghribIqamah;
+            this.IshaAdhan = salaahTime.IshaAdhan;
+            this.IshaIqamah = salaahTime.IshaIqamah;
 
-            if (salaahTime.JummahKhutbah.HasValue)
+            if (!string.IsNullOrEmpty(salaahTime.JummahKhutbah))
             {
-                this.JummahKhutbah = GetTime(salaahTime.JummahKhutbah.Value);
-                this.JummahSalaah = GetTime(salaahTime.JummahIqamah.Value);
+                this.JummahKhutbah = salaahTime.JummahKhutbah;
+                this.JummahSalaah = salaahTime.JummahIqamah;
                 this.IsJummah = true;
             }
             else
             {
-                this.ZuhrIqamah = GetTime(salaahTime.ZuhrIqamah.Value);
+                this.ZuhrIqamah = salaahTime.ZuhrIqamah;
             }
 
             System.Globalization.DateTimeFormatInfo mfi = new System.Globalization.DateTimeFormatInfo();
@@ -83,10 +79,5 @@ namespace IslamDewsburyWebsite.Models
         public string JummahSalaah { get; set; }
 
         public string DownloadUrl { get; set; }
-
-        private string GetTime(DateTime input)
-        {
-            return input.ToString("HH:mm");
-        }
     }
 }
