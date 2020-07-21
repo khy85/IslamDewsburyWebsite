@@ -17,8 +17,11 @@
                     case IslamDewsburyWebsite.Models.PaymentType.Monthly:
                         <text>Monthly Direct Debit setup</text>
                         break;
-                    case IslamDewsburyWebsite.Models.PaymentType.LastTenNights:
+                    case IslamDewsburyWebsite.Models.PaymentType.RamadanTenNights:
                         <text>Laylatul Qadr - <b>The Night of Power</b></text>
+                        break;
+                    case IslamDewsburyWebsite.Models.PaymentType.DhulHijjahTenDays:
+                        <text>Dhul Hijjah - <b>The Ten Days</b></text>
                         break;
                 }
             </i>
@@ -51,7 +54,7 @@
                     <b>The Masjid may be closed but let’s ensure our hearts don’t do the same.</b>
                 </p>
                 break;
-            case IslamDewsburyWebsite.Models.PaymentType.LastTenNights:
+            case IslamDewsburyWebsite.Models.PaymentType.RamadanTenNights:
                 <p>
                     The odd nights in the last 10 days of Ramadhan are upon us in sha Allah. Allah SWT tells us in Surah Qadr than The Night of Power
                     is better than <i>one thousand months</i> (97:3)
@@ -62,6 +65,21 @@
                 </p>
                 <p>
                     Simply set the amount you would like to donate for each of the last 10 nights.
+                </p>
+                break;
+            case IslamDewsburyWebsite.Models.PaymentType.DhulHijjahTenDays:
+                <p>
+                    The first 10 days of Dhul Hijjah are upon us in sha Allah. Just like the last ten nights of Ramadan, these ten days are packed with opportunities to earn reward.
+                </p>
+                <p>
+                    <b>The Prophet (saw) said, ‘There are no days in which righteous deeds are more beloved to Allah than in these (ten) days’. [Abu Dawud]</b>
+                </p>
+                <p>
+                    Islam Dewsbury has setup an amazing opportunity for you to automate your donations to the masjid on every day of these 10 days so you will
+                    not miss the reward of donating on on any given day.
+                </p>
+                <p>
+                    Simply set the amount you would like to donate for each of the these 10 days.
                 </p>
                 break;
         }
@@ -97,7 +115,10 @@
                     case IslamDewsburyWebsite.Models.PaymentType.Monthly:
                         <text> monthly </text>
                         break;
-                    case IslamDewsburyWebsite.Models.PaymentType.LastTenNights:
+                    case IslamDewsburyWebsite.Models.PaymentType.RamadanTenNights:
+                        <text> every day </text>
+                        break;
+                    case IslamDewsburyWebsite.Models.PaymentType.DhulHijjahTenDays:
                         <text> every day </text>
                         break;
                 }
@@ -256,7 +277,10 @@
                         case IslamDewsburyWebsite.Models.PaymentType.Monthly:
                             <text> (monthly) </text>
                             break;
-                        case IslamDewsburyWebsite.Models.PaymentType.LastTenNights:
+                        case IslamDewsburyWebsite.Models.PaymentType.RamadanTenNights:
+                            <text> (every day) </text>
+                            break;
+                        case IslamDewsburyWebsite.Models.PaymentType.DhulHijjahTenDays:
                             <text> (every day) </text>
                             break;
                     }

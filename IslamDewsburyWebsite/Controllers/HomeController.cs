@@ -133,11 +133,18 @@ namespace IslamDewsburyWebsite.Controllers
             return View("Donate",viewModel);
         }
 
-        public ActionResult DonateLastTenNights()
+        public ActionResult RamadanTenNights()
         {
-            DonateViewModel viewModel = new DonateViewModel(TodaySalaahTime, DateTime.Now, PaymentType.LastTenNights);
+            DonateViewModel viewModel = new DonateViewModel(TodaySalaahTime, DateTime.Now, PaymentType.RamadanTenNights);
 
             return View("Donate",viewModel);
+        }
+
+        public ActionResult DhulHijjahTenDays()
+        {
+            DonateViewModel viewModel = new DonateViewModel(TodaySalaahTime, DateTime.Now, PaymentType.DhulHijjahTenDays);
+
+            return View("Donate", viewModel);
         }
 
         public ActionResult ContactUs()

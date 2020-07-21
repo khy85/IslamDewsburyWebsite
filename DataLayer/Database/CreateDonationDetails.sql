@@ -23,5 +23,5 @@ Create TABLE Donation
 	City VARCHAR(200) NOT NULL,
 	Country VARCHAR(200) NOT NULL,
 	PostCode VARCHAR(10) NOT NULL,
-	DonationStatus VARCHAR(20) NOT NULL
+	DonationStatus VARCHAR(100) NOT NULL
 )

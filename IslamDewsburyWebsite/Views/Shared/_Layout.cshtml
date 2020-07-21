@@ -125,9 +125,9 @@
                     <li class="divider-vertical-second-menu"></li>
 
                     @*<li id="ContactUsLink" class="@(Model.ActiveTab == IslamDewsburyWebsite.Models.ActiveTab.ContactUs? "active" : "")">
-            @Html.ActionLink("Contact Us", "ContactUs", "Home")
-        </li>
-        <li class="divider-vertical-second-menu"></li>*@
+                            @Html.ActionLink("Contact Us", "ContactUs", "Home")
+                        </li>
+                        <li class="divider-vertical-second-menu"></li>*@
 
                     <li id="ServicesLinks" class="dropdown @(Model.ActiveTab == IslamDewsburyWebsite.Models.ActiveTab.Services? "active" : "")">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services</a>
@@ -156,11 +156,14 @@
                                 @Html.ActionLink("Set-up a Direct Debit", "DonateDD", "Home")
                             </li>
                             @*<li>
-                                @Html.ActionLink("Laylatul Qadr", "DonateLastTenNights", "Home")
+                                @Html.ActionLink("Laylatul Qadr", "DonateRamadanTenNights", "Home")
                             </li>*@
+                            <li>
+                                @Html.ActionLink("Dhul Hijjah - Ten Days", "DhulHijjahTenDays", "Home")
+                            </li>
                         </ul>
                     </li>
-                   
+
                 </ul>
             </div>
         </nav>

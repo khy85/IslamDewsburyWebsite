@@ -106,6 +106,7 @@ namespace IslamDewsburyWebsite.Models
     {
         OneOff = 1,
         Monthly = 2,
-        LastTenNights = 3
+        RamadanTenNights = 3,
+        DhulHijjahTenDays = 4
     }
 }

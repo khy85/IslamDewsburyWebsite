@@ -27,6 +27,12 @@ namespace IslamDewsburyWebsite.Controllers
                     return OneOffPayment(donateViewModel, apiContext);
                 case PaymentType.Monthly:
                     return DirectDebit(donateViewModel, apiContext);
+                //case PaymentType.RamadanTenNights:
+                //    DateTime endDate = new DateTime(2020, 7, 31);
+                //    return TenNights(donateViewModel, apiContext, endDate, PaymentType.RamadanTenNights);
+                case PaymentType.DhulHijjahTenDays:
+                    DateTime endDate = new DateTime(2020, 7, 31);
+                    return TenNights(donateViewModel, apiContext, endDate, PaymentType.DhulHijjahTenDays);
             }
 
             return View("~/Views/Home/Donate.cshtml", donateViewModel);
@@ -74,6 +80,30 @@ namespace IslamDewsburyWebsite.Controllers
         }
 
         public ActionResult CancelDdPaypalPayment(string token)
+        {
+            DonationResult result = DonationRepo.GetDonationDetailsByToken(token);
+
+            DonationRepo.UpdateDonationStatus(result.Id, "Cancelled");
+
+            return RedirectDirectDebit(false, result);
+        }
+
+        public ActionResult ReturnTenNightsPaypalPayment(string token)
+        {
+            DonationResult result = DonationRepo.GetDonationDetailsByToken(token);
+
+            APIContext apiContext = PaypalConfiguration.GetAPIContext();
+
+            var agreement = new Agreement { token = token };
+            var executedAgreement = agreement.Execute(apiContext);
+            DonationRepo.UpdateAgreementId(token, executedAgreement.id);
+
+            DonationRepo.UpdateDonationStatus(result.Id, "Set-up");
+
+            return RedirectDirectDebit(true, result);
+        }
+
+        public ActionResult CancelTenNightsPaypalPayment(string token)
         {
             DonationResult result = DonationRepo.GetDonationDetailsByToken(token);
 
@@ -201,6 +231,119 @@ namespace IslamDewsburyWebsite.Controllers
         }
 
         private ActionResult RedirectDirectDebit(bool paymentSuccessful, DonationResult donationResult)
+        {
+            var paymentType = (PaymentType)donationResult.PaymentType;
+            string paymentMade = donationResult.Amount.ToString("#.##");
+            string donor = donationResult.FirstName;
+
+            DonateResultViewModel viewModel
+                = new DonateResultViewModel(TodaySalaahTime, DateTime.Now, ActiveTab.DonationStatus, paymentType, paymentMade, paymentSuccessful, donor);
+
+            return View("PaymentResult", viewModel);
+        }
+
+        #endregion
+
+        #region 10 Nights private methods
+
+        private ActionResult TenNights(DonateViewModel donateViewModel, APIContext apiContext, DateTime endDate, PaymentType paymentType)
+        {
+            // Figure out how many days left as part of these 10 days
+            DateTime todayDate = DateTime.Today;
+            int totalDays = (endDate - todayDate).Days;
+
+            // Create Plan
+            Plan tenNightsPlan = CreateTenNightsPlan(donateViewModel, apiContext, paymentType, totalDays);
+            tenNightsPlan = Plan.Create(apiContext, tenNightsPlan);
+            int invoiceNo = this.SaveDonatorDetails(donateViewModel, tenNightsPlan.id);
+
+            // Activate the plan
+            PatchRequest patch = ActivateTenNightsPlan();
+            tenNightsPlan.Update(apiContext, patch);
+            DonationRepo.UpdateDonationStatus(invoiceNo, "Plan activated");
+
+            // Create Billing agreement
+            var agreement = new Agreement
+            {
+                name = tenNightsPlan.name,
+                description = tenNightsPlan.description,
+                start_date = DateTime.Now.AddDays(1).ToString("yyyy-MM-ddTHH:mm:ssZ"), // Start daily from tomorrow as instant payment is taken out
+                plan = new Plan
+                {
+                    id = tenNightsPlan.id
+                },
+                payer = new Payer
+                {
+                    payment_method = "paypal"
+                }
+            };
+
+            var createdAgreement = agreement.Create(apiContext);
+            DonationRepo.UpdateAgreementToken(invoiceNo, createdAgreement.token);
+            DonationRepo.UpdateDonationStatus(invoiceNo, paymentType + " set-up");
+
+            // Find the approval URL to send our user to
+            var approvalUrl = createdAgreement.links.FirstOrDefault(x => x.rel.Equals("approval_url", StringComparison.OrdinalIgnoreCase));
+
+            return Redirect(approvalUrl.href);
+        }
+
+        private Plan CreateTenNightsPlan(DonateViewModel donateViewModel, APIContext apiContext, PaymentType paymentType, int totalDays)
+        {
+            string monthRef = paymentType == PaymentType.RamadanTenNights ? "Ramadaan Last 10 Nights" : "Dhul Hijjah 10 Days";
+
+            return new Plan
+            {
+                name = $"{monthRef} DD - {donateViewModel.Donator.FirstName} {donateViewModel.Donator.LastName} - £{donateViewModel.Donation.FinalAmount}",
+                description = $"{monthRef} to Islam Dewsbury - £{donateViewModel.Donation.FinalAmount.ToString()}",
+                type = "fixed",
+                payment_definitions = new List<PaymentDefinition>
+                {
+                    new PaymentDefinition
+                    {
+                        name = "Islam Dewsbury DD",
+                        type = "REGULAR",
+                        frequency = "DAY",
+                        frequency_interval = "1",
+                        amount = new Currency
+                        {
+                            currency = "GBP",
+                            value = donateViewModel.Donation.FinalAmount.ToString()
+                        },
+                        cycles = (totalDays - 1).ToString()
+                    }
+                },
+                merchant_preferences = new MerchantPreferences
+                {
+                    // the initial payment
+                    setup_fee = new Currency
+                    {
+                        currency = "GBP",
+                        value = donateViewModel.Donation.FinalAmount.ToString()
+                    },
+                    return_url = Url.Action("ReturnTenNightsPaypalPayment", "Paypal", null, Request.Url.Scheme),
+                    cancel_url = Url.Action("CancelTenNightsPaypalPayment", "Paypal", null, Request.Url.Scheme)
+                }
+            };
+        }
+
+        private PatchRequest ActivateTenNightsPlan()
+        {
+            return new PatchRequest
+            {
+                new Patch
+                {
+                    op = "replace",
+                    path = "/",
+                    value = new Plan
+                    {
+                        state = "ACTIVE"
+                    }
+                }
+            };
+        }
+
+        private ActionResult RedirectTenNights(bool paymentSuccessful, DonationResult donationResult)
         {
             var paymentType = (PaymentType)donationResult.PaymentType;
             string paymentMade = donationResult.Amount.ToString("#.##");
