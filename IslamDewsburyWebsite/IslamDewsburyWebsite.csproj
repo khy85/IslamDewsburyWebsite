@@ -228,6 +228,9 @@
     <Content Include="Content\Images\LatestNewsAndEvents\FiveBeforeFive_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\FiveBeforeFive_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\FiveBeforeFive_Small.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\FortyHadith_Large.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\FortyHadith_Medium.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\FortyHadith_Small.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\GhuslWorkshop_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\GhuslWorkshop_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\GhuslWorkshop_Small.jpg" />
