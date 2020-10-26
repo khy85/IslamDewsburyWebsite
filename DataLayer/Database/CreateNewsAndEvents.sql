@@ -186,3 +186,11 @@ Set @Tooltip = 'Description of Paradise'
 Set @Heading = 'Description of Paradise'
 Set @Content = 'A description of Paradise delivered by Ustaad Ehsan Arshad (Graduate of the University of Madinah). Friday 31st January after Isha (7pm)'
 INSERT INTO NewsAndEvents VALUES (@DateDisplayed, @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+Set @DateDisplayed = '20201026'
+Set @EventLink = 'FortyHadith'
+Set @Tooltip = '40 Hadith of Imam An-Nawwawi'
+Set @Heading = '40 Hadith of Imam An-Nawwawi'
+Set @Content = 'Ustadh Ehsan Arshad will be doing a weekly class on the explanation of Imam An-Nawwawis 40 hadith. Every Wednesday, live on Facebook after Isha salaah'
+INSERT INTO NewsAndEvents VALUES (@DateDisplayed, @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
