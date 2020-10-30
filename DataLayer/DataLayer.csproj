@@ -75,6 +75,7 @@
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Database\JamaatMonthlyTimes\December2020SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\November2020SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\October2020SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\September2020SalaahTimes .sql" />
