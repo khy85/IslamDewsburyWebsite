@@ -267,6 +267,9 @@
     <Content Include="Content\Images\LatestNewsAndEvents\PropheticParenting_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\PropheticParenting_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\PropheticParenting_Small.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\QuranGems_Large.jpeg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\QuranGems_Medium.jpeg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\QuranGems_Small.jpeg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Ramadaan2019_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Ramadaan2019_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Ramadaan2019_Small.jpg" />

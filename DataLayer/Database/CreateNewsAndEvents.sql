@@ -194,3 +194,9 @@ Set @Heading = '40 Hadith of Imam An-Nawwawi'
 Set @Content = 'Ustadh Ehsan Arshad will be doing a weekly class on the explanation of Imam An-Nawwawis 40 hadith. Every Wednesday, live on Facebook after Isha salaah'
 INSERT INTO NewsAndEvents VALUES (@DateDisplayed, @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
 
+Set @DateDisplayed = '20200511'
+Set @EventLink = 'QuranGems'
+Set @Tooltip = 'Gems from the Quran'
+Set @Heading = 'Gems from the Quran'
+Set @Content = 'Ustada Ehsan Arshad is presenting a weekly session on an explanation of selected surahs from the Quraan and gems extracted from it. Must attend weekly class which can be seen via Facebook Live. Every Thursday after Isha prayer. www.Facebook.com.IslamDewsbury'
+INSERT INTO NewsAndEvents VALUES (@DateDisplayed, @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
