@@ -1,19 +1,21 @@
 ﻿BEGIN TRANSACTION
 
-DELETE FROM SalaahJamaatTimes WHERE SalaahDate >= '20200801'
+DECLARE @FirstDate DATETIME = '20210101'
 
-DECLARE @JummahKhutbahTime varchar(10) = '13:30'
-DECLARE @JummahSalaahTime varchar(10) = '14:00'
+DELETE FROM SalaahJamaatTimes WHERE SalaahDate >= @FirstDate
 
-DECLARE @FajrIqamahTime varchar(10) = '04:30'
-DECLARE @ZuhrIqamahTime varchar(10) = '13:45'
-DECLARE @AsrIaqmahTime varchar(10) = '18:00'
-DECLARE @IshaIqamahTime varchar(10) = '22:25'
+DECLARE @JummahKhutbahTime varchar(10) = '12:30'
+DECLARE @JummahSalaahTime varchar(10) = '13:00'
 
-DECLARE @SalaahDate DATETIME = '20200801'
-DECLARE @HijriDay INT = 11
-DECLARE @HijriMonth INT = 12
-DECLARE @HijriYr INT = 1441
+DECLARE @FajrIqamahTime varchar(10) = '07:00'
+DECLARE @ZuhrIqamahTime varchar(10) = '12:45'
+DECLARE @AsrIaqmahTime varchar(10) = '14:15'
+DECLARE @IshaIqamahTime varchar(10) = '19:00'
+
+DECLARE @SalaahDate DATETIME = '20210101'
+DECLARE @HijriDay INT = 17
+DECLARE @HijriMonth INT = 5
+DECLARE @HijriYr INT = 1442
 DECLARE @FajrIq DATETIME = @SalaahDate + @FajrIqamahTime
 DECLARE @ZuhrIq DATETIME = @SalaahDate + @ZuhrIqamahTime
 DECLARE @AsrIq DATETIME = @SalaahDate + @AsrIaqmahTime
@@ -23,7 +25,7 @@ DECLARE @JumIq DATETIME = (case when datename(dw,@SalaahDate) = 'Friday' then @S
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
-SET @SalaahDate = '20200802'
+SET @SalaahDate = '20210102'
 SET @HijriDay = @HijriDay + 1
 SET @FajrIq = @SalaahDate + @FajrIqamahTime
 SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
@@ -34,7 +36,7 @@ SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
-SET @SalaahDate = '20200803'
+SET @SalaahDate = '20210103'
 SET @HijriDay = @HijriDay + 1
 SET @FajrIq = @SalaahDate + @FajrIqamahTime
 SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
@@ -45,7 +47,7 @@ SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
-SET @SalaahDate = '20200804'
+SET @SalaahDate = '20210104'
 SET @HijriDay = @HijriDay + 1
 SET @FajrIq = @SalaahDate + @FajrIqamahTime
 SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
@@ -56,7 +58,7 @@ SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
-SET @SalaahDate = '20200805'
+SET @SalaahDate = '20210105'
 SET @HijriDay = @HijriDay + 1
 SET @FajrIq = @SalaahDate + @FajrIqamahTime
 SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
@@ -67,8 +69,7 @@ SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah)
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
-
-SET @SalaahDate = '20200806'
+SET @SalaahDate = '20210106'
 SET @HijriDay = @HijriDay + 1
 SET @FajrIq = @SalaahDate + @FajrIqamahTime
 SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
@@ -79,8 +80,7 @@ SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
-
-SET @SalaahDate = '20200807'
+SET @SalaahDate = '20210107'
 SET @HijriDay = @HijriDay + 1
 SET @FajrIq = @SalaahDate + @FajrIqamahTime
 SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
@@ -91,12 +91,7 @@ SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
-SET @FajrIqamahTime = '04:45'
-SET @ZuhrIqamahTime = '13:45'
-SET @AsrIaqmahTime  = '18:00'
-SET @IshaIqamahTime = '22:15'
-
-SET @SalaahDate = '20200808'
+SET @SalaahDate = '20210108'
 SET @HijriDay = @HijriDay + 1
 SET @FajrIq = @SalaahDate + @FajrIqamahTime
 SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
@@ -107,7 +102,7 @@ SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
-SET @SalaahDate = '20200809'
+SET @SalaahDate = '20210109'
 SET @HijriDay = @HijriDay + 1
 SET @FajrIq = @SalaahDate + @FajrIqamahTime
 SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
@@ -118,7 +113,7 @@ SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
-SET @SalaahDate = '20200810'
+SET @SalaahDate = '20210110'
 SET @HijriDay = @HijriDay + 1
 SET @FajrIq = @SalaahDate + @FajrIqamahTime
 SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
@@ -129,7 +124,7 @@ SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
-SET @SalaahDate = '20200811'
+SET @SalaahDate = '20210111'
 SET @HijriDay = @HijriDay + 1
 SET @FajrIq = @SalaahDate + @FajrIqamahTime
 SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
@@ -140,7 +135,7 @@ SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
-SET @SalaahDate = '20200812'
+SET @SalaahDate = '20210112'
 SET @HijriDay = @HijriDay + 1
 SET @FajrIq = @SalaahDate + @FajrIqamahTime
 SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
@@ -151,7 +146,7 @@ SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
-SET @SalaahDate = '20200813'
+SET @SalaahDate = '20210113'
 SET @HijriDay = @HijriDay + 1
 SET @FajrIq = @SalaahDate + @FajrIqamahTime
 SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
@@ -162,81 +157,9 @@ SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
-SET @SalaahDate = '20200814'
-SET @HijriDay = @HijriDay + 1
-SET @FajrIq = @SalaahDate + @FajrIqamahTime
-SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
-SET @AsrIq  = @SalaahDate + @AsrIaqmahTime
-SET @IshIq  = @SalaahDate + @IshaIqamahTime
-SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
-INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
-VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
-
-SET @FajrIqamahTime = '04:45'
-SET @ZuhrIqamahTime = '13:45'
-SET @AsrIaqmahTime  = '18:00'
-SET @IshaIqamahTime = '22:00'
-
-SET @SalaahDate = '20200815'
-SET @HijriDay = @HijriDay + 1
-SET @FajrIq = @SalaahDate + @FajrIqamahTime
-SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
-SET @AsrIq  = @SalaahDate + @AsrIaqmahTime
-SET @IshIq  = @SalaahDate + @IshaIqamahTime
-SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
-INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
-VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
-
-SET @SalaahDate = '20200816'
-SET @HijriDay = @HijriDay + 1
-SET @FajrIq = @SalaahDate + @FajrIqamahTime
-SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
-SET @AsrIq  = @SalaahDate + @AsrIaqmahTime
-SET @IshIq  = @SalaahDate + @IshaIqamahTime
-SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
-INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
-VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
-
-SET @SalaahDate = '20200817'
-SET @HijriDay = @HijriDay + 1
-SET @FajrIq = @SalaahDate + @FajrIqamahTime
-SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
-SET @AsrIq  = @SalaahDate + @AsrIaqmahTime
-SET @IshIq  = @SalaahDate + @IshaIqamahTime
-SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
-INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
-VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
-
-SET @SalaahDate = '20200818'
-SET @HijriDay = @HijriDay + 1
-SET @FajrIq = @SalaahDate + @FajrIqamahTime
-SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
-SET @AsrIq  = @SalaahDate + @AsrIaqmahTime
-SET @IshIq  = @SalaahDate + @IshaIqamahTime
-SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
-INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
-VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
-
-SET @SalaahDate = '20200819'
-SET @HijriDay = @HijriDay + 1
-SET @FajrIq = @SalaahDate + @FajrIqamahTime
-SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
-SET @AsrIq  = @SalaahDate + @AsrIaqmahTime
-SET @IshIq  = @SalaahDate + @IshaIqamahTime
-SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
-INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
-VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
-
-SET @SalaahDate = '20200820'
+SET @SalaahDate = '20210114'
 SET @HijriDay = 1
-SET @HijriMonth = 1
-SET @HijriYr = 1442
+SET @HijriMonth = 6
 SET @FajrIq = @SalaahDate + @FajrIqamahTime
 SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
 SET @AsrIq  = @SalaahDate + @AsrIaqmahTime
@@ -246,7 +169,7 @@ SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
-SET @SalaahDate = '20200821'
+SET @SalaahDate = '20210115'
 SET @HijriDay = @HijriDay + 1
 SET @FajrIq = @SalaahDate + @FajrIqamahTime
 SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
@@ -257,12 +180,12 @@ SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
-SET @FajrIqamahTime = '05:00'
-SET @ZuhrIqamahTime = '13:45'
-SET @AsrIaqmahTime  = '17:45'
-SET @IshaIqamahTime = '21:45'
+SET @FajrIqamahTime  = '07:00'
+SET @ZuhrIqamahTime  = '12:45'
+SET @AsrIaqmahTime   = '14:30'
+SET @IshaIqamahTime  = '19:00'
 
-SET @SalaahDate = '20200822'
+SET @SalaahDate = '20210116'
 SET @HijriDay = @HijriDay + 1
 SET @FajrIq = @SalaahDate + @FajrIqamahTime
 SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
@@ -273,7 +196,7 @@ SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
-SET @SalaahDate = '20200823'
+SET @SalaahDate = '20210117'
 SET @HijriDay = @HijriDay + 1
 SET @FajrIq = @SalaahDate + @FajrIqamahTime
 SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
@@ -284,7 +207,7 @@ SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
-SET @SalaahDate = '20200824'
+SET @SalaahDate = '20210118'
 SET @HijriDay = @HijriDay + 1
 SET @FajrIq = @SalaahDate + @FajrIqamahTime
 SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
@@ -295,7 +218,7 @@ SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
-SET @SalaahDate = '20200825'
+SET @SalaahDate = '20210119'
 SET @HijriDay = @HijriDay + 1
 SET @FajrIq = @SalaahDate + @FajrIqamahTime
 SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
@@ -306,7 +229,18 @@ SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
-SET @SalaahDate = '20200826'
+SET @SalaahDate = '20210120'
+SET @HijriDay = 1
+SET @FajrIq = @SalaahDate + @FajrIqamahTime
+SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
+SET @AsrIq  = @SalaahDate + @AsrIaqmahTime
+SET @IshIq  = @SalaahDate + @IshaIqamahTime
+SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
+INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
+VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
+
+SET @SalaahDate = '20210121'
 SET @HijriDay = @HijriDay + 1
 SET @FajrIq = @SalaahDate + @FajrIqamahTime
 SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
@@ -317,7 +251,7 @@ SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
-SET @SalaahDate = '20200827'
+SET @SalaahDate = '20210122'
 SET @HijriDay = @HijriDay + 1
 SET @FajrIq = @SalaahDate + @FajrIqamahTime
 SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
@@ -328,7 +262,12 @@ SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
-SET @SalaahDate = '20200828'
+SET @FajrIqamahTime  = '06:45'
+SET @ZuhrIqamahTime  = '12:45'
+SET @AsrIaqmahTime   = '14:45'
+SET @IshaIqamahTime  = '19:00'
+
+SET @SalaahDate = '20210123'
 SET @HijriDay = @HijriDay + 1
 SET @FajrIq = @SalaahDate + @FajrIqamahTime
 SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
@@ -339,12 +278,7 @@ SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
-SET @FajrIqamahTime = '05:15'
-SET @ZuhrIqamahTime = '13:45'
-SET @AsrIaqmahTime  = '17:30'
-SET @IshaIqamahTime = '21:30'
-
-SET @SalaahDate = '20200829'
+SET @SalaahDate = '20210124'
 SET @HijriDay = @HijriDay + 1
 SET @FajrIq = @SalaahDate + @FajrIqamahTime
 SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
@@ -355,7 +289,68 @@ SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
-SET @SalaahDate = '20200830'
+SET @SalaahDate = '20210125'
+SET @HijriDay = @HijriDay + 1
+SET @FajrIq = @SalaahDate + @FajrIqamahTime
+SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
+SET @AsrIq  = @SalaahDate + @AsrIaqmahTime
+SET @IshIq  = @SalaahDate + @IshaIqamahTime
+SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
+INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
+VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
+
+SET @SalaahDate = '20210126'
+SET @HijriDay = @HijriDay + 1
+SET @FajrIq = @SalaahDate + @FajrIqamahTime
+SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
+SET @AsrIq  = @SalaahDate + @AsrIaqmahTime
+SET @IshIq  = @SalaahDate + @IshaIqamahTime
+SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
+INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
+VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
+
+SET @SalaahDate = '20210127'
+SET @HijriDay = @HijriDay + 1
+SET @FajrIq = @SalaahDate + @FajrIqamahTime
+SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
+SET @AsrIq  = @SalaahDate + @AsrIaqmahTime
+SET @IshIq  = @SalaahDate + @IshaIqamahTime
+SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
+INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
+VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
+
+SET @SalaahDate = '20210128'
+SET @HijriDay = @HijriDay + 1
+SET @FajrIq = @SalaahDate + @FajrIqamahTime
+SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
+SET @AsrIq  = @SalaahDate + @AsrIaqmahTime
+SET @IshIq  = @SalaahDate + @IshaIqamahTime
+SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
+INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
+VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
+
+
+SET @SalaahDate = '20210129'
+SET @HijriDay = @HijriDay + 1
+SET @FajrIq = @SalaahDate + @FajrIqamahTime
+SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
+SET @AsrIq  = @SalaahDate + @AsrIaqmahTime
+SET @IshIq  = @SalaahDate + @IshaIqamahTime
+SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
+INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
+VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
+
+SET @FajrIqamahTime  = '06:30'
+SET @ZuhrIqamahTime  = '12:45'
+SET @AsrIaqmahTime   = '14:15'
+SET @IshaIqamahTime  = '19:00'
+
+SET @SalaahDate = '20210130'
 SET @HijriDay = @HijriDay + 1
 SET @FajrIq = @SalaahDate + @FajrIqamahTime
 SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
@@ -365,7 +360,7 @@ SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @
 SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
-SET @SalaahDate = '20200831'
+SET @SalaahDate = '20210131'
 SET @HijriDay = @HijriDay + 1
 SET @FajrIq = @SalaahDate + @FajrIqamahTime
 SET @ZuhrIq = @SalaahDate + @ZuhrIqamahTime
@@ -375,6 +370,6 @@ SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @
 SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
-SELECT * FROM SalaahJamaatTimes
+SELECT * FROM SalaahJamaatTimes WHERE SalaahDate >= @FirstDate
 
 commit TRANSACTION

@@ -14,7 +14,7 @@ DECLARE @ZuhrIq DATETIME = NULL -- @SalaahDate + '13:45'
 DECLARE @AsrIq DATETIME = NULL -- @SalaahDate + '18:00'
 DECLARE @IshIq DATETIME = NULL -- @SalaahDate + '22:45'
 DECLARE @JumAd DATETIME = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-DECLARE @JumIq DATETIME = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+DECLARE @JumIq DATETIME = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -25,7 +25,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -36,7 +36,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -47,7 +47,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -58,7 +58,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah)
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -70,7 +70,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -82,7 +82,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -93,7 +93,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -104,7 +104,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -115,7 +115,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -126,7 +126,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -137,7 +137,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -148,7 +148,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -159,7 +159,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -171,7 +171,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -182,7 +182,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -193,7 +193,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -204,7 +204,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -215,7 +215,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -226,7 +226,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -237,7 +237,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -249,7 +249,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -260,7 +260,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -271,7 +271,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -282,7 +282,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -293,7 +293,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -304,7 +304,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -315,7 +315,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -326,7 +326,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) 
 VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
@@ -337,7 +337,7 @@ SET @ZuhrIq = NULL --@SalaahDate + '13:45'
 SET @AsrIq = NULL --@SalaahDate + '18:00'
 SET @IshIq = NULL --@SalaahDate + '22:45'
 SET @JumAd = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahKhutbahTime else null end)
-SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @JummahSalaahTime else null end)
+SET @JumIq = (case when datename(dw,@SalaahDate) = 'Friday' then @SalaahDate + @JummahSalaahTime else null end)
 INSERT INTO SalaahJamaatTimes (SalaahDate, HijriDate, HijriMonth, HijriYear, Fajr, Zuhr, Asr, Isha, JummahKhutbah, JummahIqamah) VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq, @IshIq, @JumAd, @JumIq)
 
 SELECT * FROM SalaahJamaatTimes
