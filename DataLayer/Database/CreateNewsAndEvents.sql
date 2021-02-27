@@ -198,5 +198,5 @@ Set @DateDisplayed = '20201105'
 Set @EventLink = 'QuranGems'
 Set @Tooltip = 'Gems from the Quran'
 Set @Heading = 'Gems from the Quran'
-Set @Content = 'Ustada Ehsan Arshad is presenting a weekly session on an explanation of selected surahs from the Quraan and gems extracted from it. Must attend weekly class which can be seen via Facebook Live. Every Thursday after Isha prayer. www.Facebook.com.IslamDewsbury'
+Set @Content = 'Ustaad Ehsan Arshad is presenting a weekly session on an explanation of selected surahs from the Quraan and gems extracted from it. Must attend weekly class which can be seen via Facebook Live. Every Thursday after Isha prayer. www.Facebook.com.IslamDewsbury'
 INSERT INTO NewsAndEvents VALUES (@DateDisplayed, @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
