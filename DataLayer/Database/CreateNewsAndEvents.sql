@@ -209,17 +209,17 @@ Set @Heading = 'Dajjal - The antichrist'
 Set @Content = 'Ustaadh Ehsan Arshad will be delivering a lecture on The Dajjal - the Antichrist. Tune in on FB at 7pm on February 26th.'
 INSERT INTO NewsAndEvents VALUES (@DateDisplayed, @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
 
-Set @DateDisplayed = '20210226'
+Set @DateDisplayed = '20210304'
 Set @EventLink = 'FiqhOfRamadan'
 Set @Tooltip = 'The Fiqh of Ramadan'
 Set @Heading = 'The Fiqh of Ramadan'
 Set @Content = 'A 6 week course delivered by Ustaadh Ehsan Arshad. Every Thursday at 7.15pm. 4th March to 8th April.'
 INSERT INTO NewsAndEvents VALUES (@DateDisplayed, @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
 
-Set @DateDisplayed = '20210226'
-Set @EventLink = 'DeadlingWithDoubts'
-Set @Tooltip = 'Deadling With Doubts'
-Set @Heading = 'Deadling With Doubts'
+Set @DateDisplayed = '20210129'
+Set @EventLink = 'DealingWithDoubts'
+Set @Tooltip = 'Dealing With Doubts'
+Set @Heading = 'Dealing With Doubts'
 Set @Content = 'Ustaad Ehsan Arshad will deliver a lecture on dealing with doubts : Atheism and Liberalism. Friday 29th January at 7pm on Facebook'
 INSERT INTO NewsAndEvents VALUES (@DateDisplayed, @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
 
