@@ -223,3 +223,9 @@ Set @Heading = 'Dealing With Doubts'
 Set @Content = 'Ustaad Ehsan Arshad will deliver a lecture on dealing with doubts : Atheism and Liberalism. Friday 29th January at 7pm on Facebook'
 INSERT INTO NewsAndEvents VALUES (@DateDisplayed, @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
 
+Set @DateDisplayed = '20210412'
+Set @EventLink = 'Ramadaan2021'
+Set @Tooltip = 'Ramadaan2021'
+Set @Heading = 'Ramadaan 2021'
+Set @Content = 'Ramadaan 2021 begins on the evening of 12th April in sha Allah. May Allah allow us to maximise and accept it from us. Aameen'
+INSERT INTO NewsAndEvents VALUES (@DateDisplayed, @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)

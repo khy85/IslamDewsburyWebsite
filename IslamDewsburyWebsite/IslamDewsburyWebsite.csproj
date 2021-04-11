@@ -199,6 +199,7 @@
     <Content Include="Content\Images\Carousel\Carousel_MadrassahClass.jpg" />
     <Content Include="Content\Images\Carousel\Carousel_RamadanTimetable2020.jpg" />
     <Content Include="Content\Images\Carousel\Carousel_RamadanTimetable.jpg" />
+    <Content Include="Content\Images\Carousel\Carousel_RamadanTimetable2021.jpg" />
     <Content Include="Content\Images\Carousel\Carousel_TaleemulQuraanClass.jpg" />
     <Content Include="Content\Images\Carousel\Carousel_TajweedClass.jpg" />
     <Content Include="Content\Images\Carousel\Carousel_TasteRamadaan.jpg" />
@@ -282,6 +283,9 @@
     <Content Include="Content\Images\LatestNewsAndEvents\Ramadaan2019_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Ramadaan2019_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Ramadaan2019_Small.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\Ramadaan2021_Large.jpeg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\Ramadaan2021_Medium.jpeg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\Ramadaan2021_Small.jpeg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Ramadaan_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Ramadaan_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Ramadaan_Small.jpg" />

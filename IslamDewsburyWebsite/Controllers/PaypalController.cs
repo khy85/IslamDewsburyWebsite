@@ -27,12 +27,12 @@ namespace IslamDewsburyWebsite.Controllers
                     return OneOffPayment(donateViewModel, apiContext);
                 case PaymentType.Monthly:
                     return DirectDebit(donateViewModel, apiContext);
-                //case PaymentType.RamadanTenNights:
+                case PaymentType.RamadanTenNights:
+                    DateTime endDate = new DateTime(2021, 4, 2);
+                    return TenNights(donateViewModel, apiContext, endDate, PaymentType.RamadanTenNights);
+                //case PaymentType.DhulHijjahTenDays:
                 //    DateTime endDate = new DateTime(2020, 7, 31);
-                //    return TenNights(donateViewModel, apiContext, endDate, PaymentType.RamadanTenNights);
-                case PaymentType.DhulHijjahTenDays:
-                    DateTime endDate = new DateTime(2020, 7, 31);
-                    return TenNights(donateViewModel, apiContext, endDate, PaymentType.DhulHijjahTenDays);
+                //    return TenNights(donateViewModel, apiContext, endDate, PaymentType.DhulHijjahTenDays);
             }
 
             return View("~/Views/Home/Donate.cshtml", donateViewModel);

@@ -21,3 +21,13 @@ insert into Carousel (OrderId, ImageLocation, Tooltip, IsEnabled) Values (1, '~/
 
 insert into Carousel (OrderId, ImageLocation, Tooltip, IsEnabled) Values (7, '~/Content/Images/Carousel/Carousel_TasteRamadaan.jpg', 'Taste Ramadaan', 1)
 Select * from Carousel
+
+
+/*  Ramadaan 2021
+update carousel set IsEnabled = 1 where Id = 5
+Update Carousel set OrderId = 1 Where Id = 5
+Update Carousel set OrderId = 2 Where Id = 2
+Update Carousel set OrderId = 3 Where Id = 3
+Update Carousel set ImageLocation = '~/Content/Images/Carousel/Carousel_RamadanTimetable2021.jpg' where Id = 5
+
+*/
