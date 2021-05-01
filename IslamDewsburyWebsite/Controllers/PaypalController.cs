@@ -28,7 +28,7 @@ namespace IslamDewsburyWebsite.Controllers
                 case PaymentType.Monthly:
                     return DirectDebit(donateViewModel, apiContext);
                 case PaymentType.RamadanTenNights:
-                    DateTime endDate = new DateTime(2021, 4, 2);
+                    DateTime endDate = new DateTime(2021, 5, 11);
                     return TenNights(donateViewModel, apiContext, endDate, PaymentType.RamadanTenNights);
                 //case PaymentType.DhulHijjahTenDays:
                 //    DateTime endDate = new DateTime(2020, 7, 31);
