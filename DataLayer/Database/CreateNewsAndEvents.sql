@@ -229,3 +229,17 @@ Set @Tooltip = 'Ramadaan2021'
 Set @Heading = 'Ramadaan 2021'
 Set @Content = 'Ramadaan 2021 begins on the evening of 12th April in sha Allah. May Allah allow us to maximise and accept it from us. Aameen'
 INSERT INTO NewsAndEvents VALUES (@DateDisplayed, @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+Set @DateDisplayed = '20210519'
+Set @EventLink = 'Seerah'
+Set @Tooltip = 'Seerah'
+Set @Heading = 'Seerah - The life of the Prophet Muhammad (Peace be upon him)'
+Set @Content = 'Ustaad Ehsan Arshad will be delivering a series on the life of the Prophet Muhammad (peace be upon him) every Wednesday from 19th May on Facebook'
+INSERT INTO NewsAndEvents VALUES (@DateDisplayed, @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)
+
+Set @DateDisplayed = '20210528'
+Set @EventLink = 'Istikhara'
+Set @Tooltip = 'Istikhara'
+Set @Heading = 'Istikhara'
+Set @Content = 'Ustaad Ehsan Arshad will be a practical guide on Istikhara : seeking Allah''s help and guidance on Friday 28th May on Facebook'
+INSERT INTO NewsAndEvents VALUES (@DateDisplayed, @DateDisplayed, '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Large.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Medium.jpg', '/Content/Images/LatestNewsAndEvents/' + @EventLink + '_Small.jpg', @Tooltip, @Heading, @Content)

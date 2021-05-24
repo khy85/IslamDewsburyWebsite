@@ -253,6 +253,9 @@
     <Content Include="Content\Images\LatestNewsAndEvents\IslamicStudies_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\IslamicStudies_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\IslamicStudies_Small.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\Istikhara_Large.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\Istikhara_Medium.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\Istikhara_Small.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\LifeInTheGrave_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\LifeInTheGrave_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\LifeInTheGrave_Small.jpg" />
@@ -296,6 +299,9 @@
     <Content Include="Content\Images\LatestNewsAndEvents\RulingsOnMiscarriage_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\RulingsOnMiscarriage_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\RulingsOnMiscarriage_Small.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\Seerah_Large.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\Seerah_Medium.jpg" />
+    <Content Include="Content\Images\LatestNewsAndEvents\Seerah_Small.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Tajweed_Large.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Tajweed_Medium.jpg" />
     <Content Include="Content\Images\LatestNewsAndEvents\Tajweed_Small.jpg" />
@@ -364,6 +370,7 @@
     <Content Include="Content\MonthlySalaahTimetable\March 2021.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\May 2019.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\May 2020.jpg" />
+    <Content Include="Content\MonthlySalaahTimetable\May 2021.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\May Orig 2018.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\May 2018.jpg" />
     <Content Include="Content\MonthlySalaahTimetable\November 2017.jpg" />

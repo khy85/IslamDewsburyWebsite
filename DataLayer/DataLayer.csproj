@@ -76,6 +76,8 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Database\JamaatMonthlyTimes\April2021SalaahTimes.sql" />
+    <Content Include="Database\JamaatMonthlyTimes\May2021SalaahTimes.sql" />
+    <Content Include="Database\JamaatMonthlyTimes\June2021SalaahTimes .sql" />
     <Content Include="Database\JamaatMonthlyTimes\March2021SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\February2021SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\January2021SalaahTimes.sql" />
