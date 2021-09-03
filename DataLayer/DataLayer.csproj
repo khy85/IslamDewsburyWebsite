@@ -86,8 +86,10 @@
     <Content Include="Database\JamaatMonthlyTimes\December2020SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\MarchTimesChanges.sql" />
     <Content Include="Database\JamaatMonthlyTimes\November2020SalaahTimes.sql" />
+    <Content Include="Database\JamaatMonthlyTimes\October2021SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\October2020SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\Ramadaan2021SalaahTimes.sql" />
+    <Content Include="Database\JamaatMonthlyTimes\September2021SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\September2020SalaahTimes .sql" />
     <Content Include="Database\JamaatMonthlyTimes\August2020SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\July2020SalaahTimes.sql" />
