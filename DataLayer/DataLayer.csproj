@@ -77,6 +77,7 @@
     </Content>
     <Content Include="Database\JamaatMonthlyTimes\April2021SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\December2021SalaahTimes.sql" />
+    <Content Include="Database\JamaatMonthlyTimes\January2022SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\July2021SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\August2021SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\May2021SalaahTimes.sql" />
