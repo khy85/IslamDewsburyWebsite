@@ -28,7 +28,7 @@ namespace IslamDewsburyWebsite.Controllers
                 case PaymentType.Monthly:
                     return DirectDebit(donateViewModel, apiContext);
                 case PaymentType.RamadanTenNights:
-                    DateTime endDate = new DateTime(2021, 5, 11);
+                    DateTime endDate = new DateTime(2022, 5, 1);
                     return TenNights(donateViewModel, apiContext, endDate, PaymentType.RamadanTenNights);
                 //case PaymentType.DhulHijjahTenDays:
                 //    DateTime endDate = new DateTime(2020, 7, 31);
@@ -267,7 +267,7 @@ namespace IslamDewsburyWebsite.Controllers
             {
                 name = tenNightsPlan.name,
                 description = tenNightsPlan.description,
-                start_date = DateTime.Now.AddDays(1).ToString("yyyy-MM-ddTHH:mm:ssZ"), // Start daily from tomorrow as instant payment is taken out
+                start_date = DateTime.Today.AddDays(1).AddHours(23).ToString("yyyy-MM-ddTHH:mm:ssZ"), // Start daily from tomorrow as instant payment is taken out
                 plan = new Plan
                 {
                     id = tenNightsPlan.id
