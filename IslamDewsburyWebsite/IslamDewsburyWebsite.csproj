@@ -157,6 +157,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionFilterAttributes\LogActionAttribute.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -340,7 +341,6 @@
     <Content Include="Content\LatestNewsEvents.css" />
     <Content Include="Content\modern-business.css" />
     <Content Include="Content\MonthlySalaahTimetable\June 2022.jpg" />
-    <Content Include="Content\MonthlySalaahTimetable\May 2022.jpg" />
     <Content Include="Content\Salaah.css" />
     <Content Include="Content\NavigationBar.css" />
     <Content Include="favicon.ico" />

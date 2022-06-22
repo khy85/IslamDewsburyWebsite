@@ -10,6 +10,7 @@ namespace IslamDewsburyWebsite.Controllers
         public ISalaahTimeRepository SalaahTimesRepo;
         public ICarouselRepository CarouselRepo;
         public INewsAndEventRepository NewsAndEventRepo;
+        public ILogRepository LogRepo;
         public IDonationRepository DonationRepo;
 
         public SalaahTime TodaySalaahTime;
@@ -22,6 +23,7 @@ namespace IslamDewsburyWebsite.Controllers
             this.CarouselRepo = new CarouselRepository();
             this.NewsAndEventRepo = new NewsAndEventRepository();
             this.DonationRepo = new DonationRepository();
+            this.LogRepo = new LogRepository();
         }
 
     }

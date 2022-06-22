@@ -1,6 +1,5 @@
 ﻿using CoreLibrary;
 using System;
-using System.Collections.Generic;
 
 namespace IslamDewsburyWebsite.Models
 {

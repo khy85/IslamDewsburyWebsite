@@ -165,7 +165,6 @@ VALUES (@SalaahDate, @HijriDay, @HijriMonth, @HijriYr, @FajrIq, @ZuhrIq, @AsrIq,
 
 SET @FajrIqamahTime  = '04:00'
 SET @AsrIaqmahTime   = '18:00'
-SET @IshaIqamahTime  = '22:30'
 
 SET @SalaahDate = '20220614'
 SET @HijriDay = @HijriDay + 1

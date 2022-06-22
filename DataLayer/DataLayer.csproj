@@ -44,7 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LogRepository.cs" />
     <Compile Include="DonationRepository.cs" />
+    <Compile Include="ILogRepository.cs" />
     <Compile Include="IDonationRepository.cs" />
     <Compile Include="IslamicMonthNamesRepository.cs" />
     <Compile Include="IIslamicMonthNamesRepository.cs" />
@@ -75,33 +77,24 @@
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Database\CreateLogAccess.sql">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Database\JamaatMonthlyTimes\June2022SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\May2022SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\April2022SalaahTimes.sql" />
-    <Content Include="Database\JamaatMonthlyTimes\April2021SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\December2021SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\February2022SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\January2022SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\July2021SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\August2021SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\March2022SalaahTimes.sql" />
-    <Content Include="Database\JamaatMonthlyTimes\May2021SalaahTimes.sql" />
-    <Content Include="Database\JamaatMonthlyTimes\June2021SalaahTimes .sql" />
-    <Content Include="Database\JamaatMonthlyTimes\March2021SalaahTimes.sql" />
-    <Content Include="Database\JamaatMonthlyTimes\February2021SalaahTimes.sql" />
-    <Content Include="Database\JamaatMonthlyTimes\January2021SalaahTimes.sql" />
-    <Content Include="Database\JamaatMonthlyTimes\December2020SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\MarchTimesChanges.sql" />
     <Content Include="Database\JamaatMonthlyTimes\November2021SalaahTimes.sql" />
-    <Content Include="Database\JamaatMonthlyTimes\November2020SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\October2021SalaahTimes.sql" />
-    <Content Include="Database\JamaatMonthlyTimes\October2020SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\Ramadaan2021SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\September2021SalaahTimes.sql" />
-    <Content Include="Database\JamaatMonthlyTimes\September2020SalaahTimes .sql" />
-    <Content Include="Database\JamaatMonthlyTimes\August2020SalaahTimes.sql" />
-    <Content Include="Database\JamaatMonthlyTimes\July2020SalaahTimes.sql" />
-    <Content Include="Database\JamaatMonthlyTimes\June2020SalaahTimes.sql" />
     <Content Include="Database\CreateIslamicMonths.sql">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>

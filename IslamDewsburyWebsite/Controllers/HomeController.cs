@@ -1,4 +1,5 @@
 ﻿using DataLayer;
+using IslamDewsburyWebsite.ActionFilterAttributes;
 using IslamDewsburyWebsite.Models;
 using IslamDewsburyWebsite.Services;
 using System;
@@ -8,6 +9,7 @@ using System.Web.Mvc;
 
 namespace IslamDewsburyWebsite.Controllers
 {
+    
     public class HomeController : BaseController
     {
         private IMailService _mailSvc;
@@ -17,6 +19,7 @@ namespace IslamDewsburyWebsite.Controllers
             this._mailSvc = mailSvc;
         }
 
+        [LogAction]
         public ActionResult Index()
         {
             var indexViewModel = new IndexViewModel(TodaySalaahTime, DateTime.Now);
@@ -35,6 +38,7 @@ namespace IslamDewsburyWebsite.Controllers
             return View(indexViewModel);
         }
 
+        [LogAction]
         public ActionResult NewsAndEvent(int id)
         {
             var ne = NewsAndEventRepo.Find(id);
@@ -43,6 +47,7 @@ namespace IslamDewsburyWebsite.Controllers
             return View(viewModel);
         }
 
+        [LogAction]
         public ActionResult PreviousNewsAndEvents()
         {
             var newsAndEvents = GetNewsAndEventViewModels();
@@ -67,6 +72,8 @@ namespace IslamDewsburyWebsite.Controllers
 
 
         #region Salaah Times
+
+        [LogAction]
         public PartialViewResult NextSalaahTimes(DateTime currentDate)
         {
             var nextSalaah = this.SalaahTimesRepo.Find(currentDate.AddDays(1));
@@ -78,6 +85,7 @@ namespace IslamDewsburyWebsite.Controllers
             return PartialView("_SalaahTimes", salaahTimes);
         }
 
+        [LogAction]
         public PartialViewResult PreviousSalaahTimes(DateTime currentDate)
         {
             var nextSalaah = this.SalaahTimesRepo.Find(currentDate.AddDays(-1));
@@ -95,9 +103,26 @@ namespace IslamDewsburyWebsite.Controllers
         {
             GenericTabbedViewModel viewModel = new GenericTabbedViewModel(TodaySalaahTime, id, DateTime.Now, ActiveTab.AboutUs);
 
+            string tab = string.Empty;
+            switch(id)
+            {
+                case 1:
+                    tab = "The Centre";
+                    break;
+                case 2:
+                    tab = "Imam";
+                    break;
+                case 3:
+                    tab = "Background";
+                    break;
+
+            }
+            LogRepo.LogAccess("Home", "AboutUs", tab, DateTime.Now);
+
             return View(viewModel);
         }
 
+        [LogAction]
         public ActionResult Sisters()
         {
             GenericViewModel viewModel = new GenericViewModel(TodaySalaahTime, DateTime.Now, true, ActiveTab.Sisters);
@@ -105,6 +130,7 @@ namespace IslamDewsburyWebsite.Controllers
             return View(viewModel);
         }
 
+        [LogAction]
         public ActionResult Madrassah()
         {
             GenericViewModel viewModel = new GenericViewModel(TodaySalaahTime, DateTime.Now, true, ActiveTab.Madrassah);
@@ -116,9 +142,30 @@ namespace IslamDewsburyWebsite.Controllers
         {
             GenericTabbedViewModel viewModel = new GenericTabbedViewModel(TodaySalaahTime, id, DateTime.Now, ActiveTab.Services);
 
+            string tab = string.Empty;
+            switch (id)
+            {
+                case 1:
+                    tab = "Open Day";
+                    break;
+                case 2:
+                    tab = "Accepting Islam";
+                    break;
+                case 3:
+                    tab = "Wedding";
+                    break;
+                case 4:
+                    tab = "Funeral";
+                    break;
+
+            }
+            LogRepo.LogAccess("Home", "Services", tab, DateTime.Now);
+
+
             return View(viewModel);
         }
 
+        [LogAction]
         public ActionResult Donate()
         {
             DonateViewModel viewModel = new DonateViewModel(TodaySalaahTime, DateTime.Now, PaymentType.OneOff);
@@ -126,6 +173,7 @@ namespace IslamDewsburyWebsite.Controllers
             return View(viewModel);
         }
 
+        [LogAction]
         public ActionResult DonateDD()
         {
             DonateViewModel viewModel = new DonateViewModel(TodaySalaahTime, DateTime.Now, PaymentType.Monthly);
@@ -133,6 +181,7 @@ namespace IslamDewsburyWebsite.Controllers
             return View("Donate",viewModel);
         }
 
+        [LogAction]
         public ActionResult RamadanTenNights()
         {
             DonateViewModel viewModel = new DonateViewModel(TodaySalaahTime, DateTime.Now, PaymentType.RamadanTenNights);
@@ -140,6 +189,7 @@ namespace IslamDewsburyWebsite.Controllers
             return View("Donate",viewModel);
         }
 
+        [LogAction]
         public ActionResult DhulHijjahTenDays()
         {
             DonateViewModel viewModel = new DonateViewModel(TodaySalaahTime, DateTime.Now, PaymentType.DhulHijjahTenDays);
@@ -147,6 +197,7 @@ namespace IslamDewsburyWebsite.Controllers
             return View("Donate", viewModel);
         }
 
+        [LogAction]
         public ActionResult ContactUs()
         {
             ContactMessageViewModel viewModel = new ContactMessageViewModel();

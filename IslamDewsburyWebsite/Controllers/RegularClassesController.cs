@@ -1,12 +1,11 @@
-﻿using IslamDewsburyWebsite.Models;
+﻿using IslamDewsburyWebsite.ActionFilterAttributes;
+using IslamDewsburyWebsite.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace IslamDewsburyWebsite.Controllers
 {
+    [LogAction]
     public class RegularClassesController : BaseController
     {
 

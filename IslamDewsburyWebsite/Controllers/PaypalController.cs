@@ -1,4 +1,5 @@
 ﻿using CoreLibrary;
+using IslamDewsburyWebsite.ActionFilterAttributes;
 using IslamDewsburyWebsite.Helper;
 using IslamDewsburyWebsite.Models;
 using PayPal.Api;
@@ -9,6 +10,7 @@ using System.Web.Mvc;
 
 namespace IslamDewsburyWebsite.Controllers
 {
+    [LogAction]
     public class PaypalController : BaseController
     {
         private Payment payment;
@@ -21,6 +23,7 @@ namespace IslamDewsburyWebsite.Controllers
 
             APIContext apiContext = PaypalConfiguration.GetAPIContext();
 
+            DateTime? endDate = null;
             switch (donateViewModel.Donation.PaymentType)
             {
                 case PaymentType.OneOff:
@@ -28,11 +31,11 @@ namespace IslamDewsburyWebsite.Controllers
                 case PaymentType.Monthly:
                     return DirectDebit(donateViewModel, apiContext);
                 case PaymentType.RamadanTenNights:
-                    DateTime endDate = new DateTime(2022, 5, 1);
-                    return TenNights(donateViewModel, apiContext, endDate, PaymentType.RamadanTenNights);
-                //case PaymentType.DhulHijjahTenDays:
-                //    DateTime endDate = new DateTime(2020, 7, 31);
-                //    return TenNights(donateViewModel, apiContext, endDate, PaymentType.DhulHijjahTenDays);
+                    endDate = new DateTime(2022, 5, 1);
+                    return TenNights(donateViewModel, apiContext, endDate.Value, PaymentType.RamadanTenNights);
+                case PaymentType.DhulHijjahTenDays:
+                    endDate = new DateTime(2022, 7, 9);
+                    return TenNights(donateViewModel, apiContext, endDate.Value, PaymentType.DhulHijjahTenDays);
             }
 
             return View("~/Views/Home/Donate.cshtml", donateViewModel);
