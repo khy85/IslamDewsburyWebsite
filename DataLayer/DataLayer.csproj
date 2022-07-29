@@ -81,14 +81,14 @@
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Database\JamaatMonthlyTimes\July2022SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\June2022SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\May2022SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\April2022SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\December2021SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\February2022SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\January2022SalaahTimes.sql" />
-    <Content Include="Database\JamaatMonthlyTimes\July2021SalaahTimes.sql" />
-    <Content Include="Database\JamaatMonthlyTimes\August2021SalaahTimes.sql" />
+    <Content Include="Database\JamaatMonthlyTimes\August2022SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\March2022SalaahTimes.sql" />
     <Content Include="Database\JamaatMonthlyTimes\MarchTimesChanges.sql" />
     <Content Include="Database\JamaatMonthlyTimes\November2021SalaahTimes.sql" />
